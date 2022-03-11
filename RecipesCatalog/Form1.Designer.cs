@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.panelButtons = new System.Windows.Forms.Panel();
+            this.panelTitle = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.btnFavourites = new System.Windows.Forms.Button();
             this.btnAddRecipe = new System.Windows.Forms.Button();
             this.btnCourses = new System.Windows.Forms.Button();
@@ -39,9 +43,6 @@
             this.btnAppetizers = new System.Windows.Forms.Button();
             this.btnSalads = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.panelTitle = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -60,7 +61,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 463);
+            this.panelMenu.Size = new System.Drawing.Size(200, 590);
             this.panelMenu.TabIndex = 0;
             // 
             // panelLogo
@@ -73,8 +74,52 @@
             this.panelLogo.Size = new System.Drawing.Size(200, 80);
             this.panelLogo.TabIndex = 0;
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // panelButtons
+            // 
+            this.panelButtons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelButtons.Location = new System.Drawing.Point(200, 80);
+            this.panelButtons.Name = "panelButtons";
+            this.panelButtons.Size = new System.Drawing.Size(836, 510);
+            this.panelButtons.TabIndex = 2;
+            this.panelButtons.Paint += new System.Windows.Forms.PaintEventHandler(this.panelButtons_Paint);
+            // 
+            // panelTitle
+            // 
+            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(117)))), ((int)(((byte)(136)))));
+            this.panelTitle.Controls.Add(this.btnHome);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(200, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(836, 80);
+            this.panelTitle.TabIndex = 1;
+            // 
+            // btnHome
+            // 
+            this.btnHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(117)))), ((int)(((byte)(136)))));
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(117)))), ((int)(((byte)(136)))));
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Segoe Print", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnHome.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnHome.Location = new System.Drawing.Point(344, 3);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(148, 57);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "HOME";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // btnFavourites
             // 
+            this.btnFavourites.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFavourites.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFavourites.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(94)))), ((int)(((byte)(93)))));
             this.btnFavourites.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -92,6 +137,7 @@
             // 
             // btnAddRecipe
             // 
+            this.btnAddRecipe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddRecipe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAddRecipe.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(94)))), ((int)(((byte)(93)))));
             this.btnAddRecipe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -109,6 +155,7 @@
             // 
             // btnCourses
             // 
+            this.btnCourses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCourses.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCourses.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(94)))), ((int)(((byte)(93)))));
             this.btnCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -126,6 +173,7 @@
             // 
             // btnMain
             // 
+            this.btnMain.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMain.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(94)))), ((int)(((byte)(93)))));
             this.btnMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -143,6 +191,7 @@
             // 
             // btnAppetizers
             // 
+            this.btnAppetizers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAppetizers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAppetizers.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(94)))), ((int)(((byte)(93)))));
             this.btnAppetizers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -160,6 +209,7 @@
             // 
             // btnSalads
             // 
+            this.btnSalads.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalads.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSalads.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(94)))), ((int)(((byte)(93)))));
             this.btnSalads.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -190,51 +240,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "    Catalog";
             // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // panelTitle
-            // 
-            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(117)))), ((int)(((byte)(136)))));
-            this.panelTitle.Controls.Add(this.lblTitle);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(200, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(600, 80);
-            this.panelTitle.TabIndex = 1;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe Print", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(235, 9);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(129, 57);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "HOME";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(800, 463);
+            this.ClientSize = new System.Drawing.Size(1036, 590);
+            this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1052, 629);
+            this.MinimumSize = new System.Drawing.Size(1052, 629);
             this.Name = "Form1";
-            this.Text = "RecipesCatalog";
+            this.Text = "Homely Taste";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.panelTitle.ResumeLayout(false);
-            this.panelTitle.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -251,8 +276,9 @@
         private System.Windows.Forms.Button btnFavourites;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Panel panelTitle;
-        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button btnHome;
     }
 }
 
