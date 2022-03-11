@@ -16,5 +16,10 @@ namespace RecipesCatalog
         {
             InitializeComponent();
         }
+
+        private void btnSalads_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
