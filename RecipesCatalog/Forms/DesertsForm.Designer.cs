@@ -43,6 +43,7 @@
             // 
             // btnDesertUnfavourite
             // 
+            this.btnDesertUnfavourite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDesertUnfavourite.FlatAppearance.BorderSize = 0;
             this.btnDesertUnfavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesertUnfavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnDesertUnfavourite.Image")));
@@ -55,6 +56,7 @@
             // 
             // btnDesertFavourite
             // 
+            this.btnDesertFavourite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDesertFavourite.FlatAppearance.BorderSize = 0;
             this.btnDesertFavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesertFavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnDesertFavourite.Image")));
@@ -75,6 +77,7 @@
             // 
             // btnAddDesert
             // 
+            this.btnAddDesert.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddDesert.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddDesert.Location = new System.Drawing.Point(137, 397);
             this.btnAddDesert.Name = "btnAddDesert";
@@ -85,6 +88,7 @@
             // 
             // btnRemoveDesert
             // 
+            this.btnRemoveDesert.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveDesert.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRemoveDesert.Location = new System.Drawing.Point(255, 397);
             this.btnRemoveDesert.Name = "btnRemoveDesert";
@@ -95,6 +99,7 @@
             // 
             // btnOpenDesert
             // 
+            this.btnOpenDesert.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenDesert.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnOpenDesert.Location = new System.Drawing.Point(18, 397);
             this.btnOpenDesert.Name = "btnOpenDesert";
@@ -135,7 +140,7 @@
             this.Controls.Add(this.btnOpenDesert);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataDeserts);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "DesertsForm";
             this.Text = "DesertsForm";
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSalads)).EndInit();
