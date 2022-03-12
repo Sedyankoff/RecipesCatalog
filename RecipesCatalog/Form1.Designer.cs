@@ -72,6 +72,7 @@
             this.btnFavourites.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFavourites.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFavourites.ForeColor = System.Drawing.Color.White;
+            this.btnFavourites.Image = ((System.Drawing.Image)(resources.GetObject("btnFavourites.Image")));
             this.btnFavourites.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFavourites.Location = new System.Drawing.Point(0, 380);
             this.btnFavourites.Name = "btnFavourites";
@@ -89,6 +90,7 @@
             this.btnAddRecipe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRecipe.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRecipe.ForeColor = System.Drawing.Color.White;
+            this.btnAddRecipe.Image = ((System.Drawing.Image)(resources.GetObject("btnAddRecipe.Image")));
             this.btnAddRecipe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddRecipe.Location = new System.Drawing.Point(0, 320);
             this.btnAddRecipe.Name = "btnAddRecipe";
@@ -106,6 +108,7 @@
             this.btnCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCourses.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCourses.ForeColor = System.Drawing.Color.White;
+            this.btnCourses.Image = ((System.Drawing.Image)(resources.GetObject("btnCourses.Image")));
             this.btnCourses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCourses.Location = new System.Drawing.Point(0, 260);
             this.btnCourses.Name = "btnCourses";
@@ -186,6 +189,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
