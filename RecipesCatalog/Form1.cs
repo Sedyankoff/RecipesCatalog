@@ -22,7 +22,7 @@ namespace RecipesCatalog
 
         private void btnSalads_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Forms.SaladsForm(), sender);
         }
 
         private void panelButtons_Paint(object sender, PaintEventArgs e)

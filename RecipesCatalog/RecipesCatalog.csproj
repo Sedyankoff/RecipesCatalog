@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>RecipesCatalog</RootNamespace>
     <AssemblyName>RecipesCatalog</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -71,6 +71,12 @@
     <Compile Include="Forms\ProductsForm.Designer.cs">
       <DependentUpon>ProductsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SaladsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SaladsForm.Designer.cs">
+      <DependentUpon>SaladsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductsForm.resx">
       <DependentUpon>ProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaladsForm.resx">
+      <DependentUpon>SaladsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

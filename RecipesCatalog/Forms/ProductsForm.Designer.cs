@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsForm));
-            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnInsertProduct = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.txtBoxName = new System.Windows.Forms.TextBox();
-            this.txtBoxType = new System.Windows.Forms.TextBox();
+            this.btnUpdateProduct = new System.Windows.Forms.Button();
+            this.btnRemoveProduct = new System.Windows.Forms.Button();
+            this.txtBoxProductName = new System.Windows.Forms.TextBox();
+            this.txtBoxProductType = new System.Windows.Forms.TextBox();
             this.dataProducts = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,15 +46,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnInsert
+            // btnInsertProduct
             // 
-            this.btnInsert.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(40, 397);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(102, 40);
-            this.btnInsert.TabIndex = 0;
-            this.btnInsert.Text = "Insert";
-            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsertProduct.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertProduct.Location = new System.Drawing.Point(40, 397);
+            this.btnInsertProduct.Name = "btnInsertProduct";
+            this.btnInsertProduct.Size = new System.Drawing.Size(95, 40);
+            this.btnInsertProduct.TabIndex = 0;
+            this.btnInsertProduct.Text = "Insert";
+            this.btnInsertProduct.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -76,43 +76,44 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Product Type";
             // 
-            // btnUpdate
+            // btnUpdateProduct
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(172, 397);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(95, 40);
-            this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateProduct.Location = new System.Drawing.Point(168, 397);
+            this.btnUpdateProduct.Name = "btnUpdateProduct";
+            this.btnUpdateProduct.Size = new System.Drawing.Size(95, 40);
+            this.btnUpdateProduct.TabIndex = 3;
+            this.btnUpdateProduct.Text = "Update";
+            this.btnUpdateProduct.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
-            // btnRemove
+            // btnRemoveProduct
             // 
-            this.btnRemove.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(294, 397);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(95, 40);
-            this.btnRemove.TabIndex = 4;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemoveProduct.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveProduct.Location = new System.Drawing.Point(294, 397);
+            this.btnRemoveProduct.Name = "btnRemoveProduct";
+            this.btnRemoveProduct.Size = new System.Drawing.Size(95, 40);
+            this.btnRemoveProduct.TabIndex = 4;
+            this.btnRemoveProduct.Text = "Remove";
+            this.btnRemoveProduct.UseVisualStyleBackColor = true;
             // 
-            // txtBoxName
+            // txtBoxProductName
             // 
-            this.txtBoxName.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxName.Location = new System.Drawing.Point(263, 283);
-            this.txtBoxName.Multiline = true;
-            this.txtBoxName.Name = "txtBoxName";
-            this.txtBoxName.Size = new System.Drawing.Size(126, 31);
-            this.txtBoxName.TabIndex = 5;
+            this.txtBoxProductName.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxProductName.Location = new System.Drawing.Point(263, 283);
+            this.txtBoxProductName.Multiline = true;
+            this.txtBoxProductName.Name = "txtBoxProductName";
+            this.txtBoxProductName.Size = new System.Drawing.Size(126, 31);
+            this.txtBoxProductName.TabIndex = 5;
             // 
-            // txtBoxType
+            // txtBoxProductType
             // 
-            this.txtBoxType.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxType.Location = new System.Drawing.Point(263, 330);
-            this.txtBoxType.Multiline = true;
-            this.txtBoxType.Name = "txtBoxType";
-            this.txtBoxType.Size = new System.Drawing.Size(126, 29);
-            this.txtBoxType.TabIndex = 6;
+            this.txtBoxProductType.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxProductType.Location = new System.Drawing.Point(263, 330);
+            this.txtBoxProductType.Multiline = true;
+            this.txtBoxProductType.Name = "txtBoxProductType";
+            this.txtBoxProductType.Size = new System.Drawing.Size(126, 29);
+            this.txtBoxProductType.TabIndex = 6;
             // 
             // dataProducts
             // 
@@ -181,15 +182,15 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataProducts);
-            this.Controls.Add(this.txtBoxType);
-            this.Controls.Add(this.txtBoxName);
-            this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.txtBoxProductType);
+            this.Controls.Add(this.txtBoxProductName);
+            this.Controls.Add(this.btnRemoveProduct);
+            this.Controls.Add(this.btnUpdateProduct);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.btnInsertProduct);
             this.Name = "ProductsForm";
             this.Text = "ProductsForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).EndInit();
@@ -201,13 +202,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnInsertProduct;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.TextBox txtBoxName;
-        private System.Windows.Forms.TextBox txtBoxType;
+        private System.Windows.Forms.Button btnUpdateProduct;
+        private System.Windows.Forms.Button btnRemoveProduct;
+        private System.Windows.Forms.TextBox txtBoxProductName;
+        private System.Windows.Forms.TextBox txtBoxProductType;
         private System.Windows.Forms.DataGridView dataProducts;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

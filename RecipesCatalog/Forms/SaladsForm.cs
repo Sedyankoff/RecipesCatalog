@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace RecipesCatalog.Forms
 {
-    public partial class ProductsForm : Form
+    public partial class SaladsForm : Form
     {
-        public ProductsForm()
+        public SaladsForm()
         {
             InitializeComponent();
-        }
-
-        private void btnUpdateProduct_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
