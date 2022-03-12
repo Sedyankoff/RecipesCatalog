@@ -41,9 +41,9 @@ namespace RecipesCatalog.Forms
             // dataFavourites
             // 
             this.dataFavourites.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataFavourites.Location = new System.Drawing.Point(458, 99);
+            this.dataFavourites.Location = new System.Drawing.Point(450, 72);
             this.dataFavourites.Name = "dataFavourites";
-            this.dataFavourites.Size = new System.Drawing.Size(330, 321);
+            this.dataFavourites.Size = new System.Drawing.Size(322, 365);
             this.dataFavourites.TabIndex = 1;
             // 
             // pictureBox1
@@ -58,7 +58,7 @@ namespace RecipesCatalog.Forms
             // btnOpenFavourite
             // 
             this.btnOpenFavourite.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnOpenFavourite.Location = new System.Drawing.Point(84, 377);
+            this.btnOpenFavourite.Location = new System.Drawing.Point(84, 394);
             this.btnOpenFavourite.Name = "btnOpenFavourite";
             this.btnOpenFavourite.Size = new System.Drawing.Size(100, 43);
             this.btnOpenFavourite.TabIndex = 3;
@@ -69,7 +69,7 @@ namespace RecipesCatalog.Forms
             // btnRemoveFavourite
             // 
             this.btnRemoveFavourite.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRemoveFavourite.Location = new System.Drawing.Point(241, 377);
+            this.btnRemoveFavourite.Location = new System.Drawing.Point(241, 394);
             this.btnRemoveFavourite.Name = "btnRemoveFavourite";
             this.btnRemoveFavourite.Size = new System.Drawing.Size(100, 43);
             this.btnRemoveFavourite.TabIndex = 4;
@@ -80,7 +80,7 @@ namespace RecipesCatalog.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(450, 19);
+            this.label1.Location = new System.Drawing.Point(443, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(338, 47);
             this.label1.TabIndex = 5;
@@ -91,7 +91,7 @@ namespace RecipesCatalog.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(820, 471);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRemoveFavourite);
             this.Controls.Add(this.btnOpenFavourite);
