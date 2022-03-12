@@ -49,7 +49,7 @@ namespace RecipesCatalog.Forms
             // pictureBox1
             // 
             this.pictureBox1.Image = global::RecipesCatalog.Properties.Resources.logoFinished;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 81);
+            this.pictureBox1.Location = new System.Drawing.Point(84, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(257, 232);
             this.pictureBox1.TabIndex = 2;
@@ -58,17 +58,18 @@ namespace RecipesCatalog.Forms
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(35, 377);
+            this.button1.Location = new System.Drawing.Point(84, 377);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 43);
             this.button1.TabIndex = 3;
             this.button1.Text = "Open";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(192, 377);
+            this.button2.Location = new System.Drawing.Point(241, 377);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 43);
             this.button2.TabIndex = 4;
