@@ -124,18 +124,20 @@
             // 
             // btnAddProductRecipe
             // 
+            this.btnAddProductRecipe.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProductRecipe.Location = new System.Drawing.Point(348, 204);
             this.btnAddProductRecipe.Name = "btnAddProductRecipe";
-            this.btnAddProductRecipe.Size = new System.Drawing.Size(109, 37);
+            this.btnAddProductRecipe.Size = new System.Drawing.Size(129, 37);
             this.btnAddProductRecipe.TabIndex = 7;
             this.btnAddProductRecipe.Text = "Add Product";
             this.btnAddProductRecipe.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(517, 204);
+            this.button2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(497, 204);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 37);
+            this.button2.Size = new System.Drawing.Size(129, 37);
             this.button2.TabIndex = 8;
             this.button2.Text = "Add Recipe";
             this.button2.UseVisualStyleBackColor = true;
