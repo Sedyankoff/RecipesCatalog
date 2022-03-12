@@ -73,5 +73,11 @@ namespace RecipesCatalog
         {
             OpenChildForm(new Forms.AppetizerForm(), sender);
         }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.MainCoursesForm(), sender);
+
+        }
     }
 }

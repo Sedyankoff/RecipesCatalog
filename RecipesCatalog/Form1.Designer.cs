@@ -226,6 +226,7 @@
             this.btnMain.Text = " Main Courses";
             this.btnMain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMain.UseVisualStyleBackColor = true;
+            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
             // btnAppetizers
             // 

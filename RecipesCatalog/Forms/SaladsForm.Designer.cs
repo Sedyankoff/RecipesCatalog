@@ -94,7 +94,7 @@
             this.btnSaladUnfavourite.FlatAppearance.BorderSize = 0;
             this.btnSaladUnfavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaladUnfavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnSaladUnfavourite.Image")));
-            this.btnSaladUnfavourite.Location = new System.Drawing.Point(370, 397);
+            this.btnSaladUnfavourite.Location = new System.Drawing.Point(371, 397);
             this.btnSaladUnfavourite.Name = "btnSaladUnfavourite";
             this.btnSaladUnfavourite.Size = new System.Drawing.Size(50, 40);
             this.btnSaladUnfavourite.TabIndex = 7;
