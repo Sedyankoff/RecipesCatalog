@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FavouritesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FavouritesForm.designer.cs">
+      <DependentUpon>FavouritesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FavouritesForm.resx">
+      <DependentUpon>FavouritesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
@@ -143,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\homeBackground1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoFinished.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

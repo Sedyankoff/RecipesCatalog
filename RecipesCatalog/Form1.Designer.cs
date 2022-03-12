@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnFavourites = new System.Windows.Forms.Button();
             this.btnAddRecipe = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.panelButtons = new System.Windows.Forms.Panel();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -67,6 +67,18 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(200, 590);
             this.panelMenu.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(-2, 522);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(204, 56);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Creators: Plamen, Stoil,\r\nMartin and Ivalin \r\n";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnProducts
             // 
@@ -104,6 +116,7 @@
             this.btnFavourites.Text = " Favourites";
             this.btnFavourites.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFavourites.UseVisualStyleBackColor = true;
+            this.btnFavourites.Click += new System.EventHandler(this.btnFavourites_Click);
             // 
             // btnAddRecipe
             // 
@@ -263,18 +276,6 @@
             this.btnHome.Text = "HOME";
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(-2, 522);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 56);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Creators: Plamen, Stoil,\r\nMartin and Ivalin \r\n";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
