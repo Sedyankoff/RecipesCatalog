@@ -32,7 +32,7 @@ namespace RecipesCatalog
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Forms.FormHome(), sender);
         }
 
         private void OpenChildForm(Form childForm, object btnSender)
