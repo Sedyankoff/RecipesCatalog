@@ -45,7 +45,7 @@ namespace RecipesCatalog.Forms
             // btnAddMainCourses
             // 
             this.btnAddMainCourses.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddMainCourses.Location = new System.Drawing.Point(137, 403);
+            this.btnAddMainCourses.Location = new System.Drawing.Point(137, 397);
             this.btnAddMainCourses.Name = "btnAddMainCourses";
             this.btnAddMainCourses.Size = new System.Drawing.Size(95, 40);
             this.btnAddMainCourses.TabIndex = 12;
@@ -55,7 +55,7 @@ namespace RecipesCatalog.Forms
             // btnRemoveMainCourses
             // 
             this.btnRemoveMainCourses.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRemoveMainCourses.Location = new System.Drawing.Point(255, 403);
+            this.btnRemoveMainCourses.Location = new System.Drawing.Point(255, 397);
             this.btnRemoveMainCourses.Name = "btnRemoveMainCourses";
             this.btnRemoveMainCourses.Size = new System.Drawing.Size(95, 40);
             this.btnRemoveMainCourses.TabIndex = 11;
@@ -65,7 +65,7 @@ namespace RecipesCatalog.Forms
             // btnOpenMainCourses
             // 
             this.btnOpenMainCourses.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnOpenMainCourses.Location = new System.Drawing.Point(18, 403);
+            this.btnOpenMainCourses.Location = new System.Drawing.Point(18, 397);
             this.btnOpenMainCourses.Name = "btnOpenMainCourses";
             this.btnOpenMainCourses.Size = new System.Drawing.Size(95, 40);
             this.btnOpenMainCourses.TabIndex = 10;
@@ -75,7 +75,7 @@ namespace RecipesCatalog.Forms
             // dataMainCourses
             // 
             this.dataMainCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataMainCourses.Location = new System.Drawing.Point(450, 78);
+            this.dataMainCourses.Location = new System.Drawing.Point(450, 72);
             this.dataMainCourses.Name = "dataMainCourses";
             this.dataMainCourses.Size = new System.Drawing.Size(322, 365);
             this.dataMainCourses.TabIndex = 8;
@@ -85,7 +85,7 @@ namespace RecipesCatalog.Forms
             this.btnMainCoursesUnfavourite.FlatAppearance.BorderSize = 0;
             this.btnMainCoursesUnfavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMainCoursesUnfavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnMainCoursesUnfavourite.Image")));
-            this.btnMainCoursesUnfavourite.Location = new System.Drawing.Point(370, 403);
+            this.btnMainCoursesUnfavourite.Location = new System.Drawing.Point(370, 397);
             this.btnMainCoursesUnfavourite.Name = "btnMainCoursesUnfavourite";
             this.btnMainCoursesUnfavourite.Size = new System.Drawing.Size(50, 40);
             this.btnMainCoursesUnfavourite.TabIndex = 14;
@@ -95,7 +95,7 @@ namespace RecipesCatalog.Forms
             // picBoxMainCourses
             // 
             this.picBoxMainCourses.Image = global::RecipesCatalog.Properties.Resources.logoFinished;
-            this.picBoxMainCourses.Location = new System.Drawing.Point(88, 85);
+            this.picBoxMainCourses.Location = new System.Drawing.Point(88, 79);
             this.picBoxMainCourses.Name = "picBoxMainCourses";
             this.picBoxMainCourses.Size = new System.Drawing.Size(258, 278);
             this.picBoxMainCourses.TabIndex = 13;
@@ -105,7 +105,7 @@ namespace RecipesCatalog.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(452, 28);
+            this.label1.Location = new System.Drawing.Point(452, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(316, 47);
             this.label1.TabIndex = 15;
@@ -116,7 +116,7 @@ namespace RecipesCatalog.Forms
             this.btnMainCoursesFavourite.FlatAppearance.BorderSize = 0;
             this.btnMainCoursesFavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMainCoursesFavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnMainCoursesFavourite.Image")));
-            this.btnMainCoursesFavourite.Location = new System.Drawing.Point(370, 403);
+            this.btnMainCoursesFavourite.Location = new System.Drawing.Point(370, 397);
             this.btnMainCoursesFavourite.Name = "btnMainCoursesFavourite";
             this.btnMainCoursesFavourite.Size = new System.Drawing.Size(50, 40);
             this.btnMainCoursesFavourite.TabIndex = 16;
@@ -126,6 +126,7 @@ namespace RecipesCatalog.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(820, 471);
             this.Controls.Add(this.btnMainCoursesFavourite);
             this.Controls.Add(this.label1);
