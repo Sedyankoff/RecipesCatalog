@@ -29,6 +29,7 @@ namespace RecipesCatalog.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppetizerForm));
             this.label1 = new System.Windows.Forms.Label();
             this.dataAppetizer = new System.Windows.Forms.DataGridView();
             this.btnAddAppetizer = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@ namespace RecipesCatalog.Forms
             this.btnOpenAppetizer = new System.Windows.Forms.Button();
             this.btnAppetizerUnfavourite = new System.Windows.Forms.Button();
             this.picBoxAppetizer = new System.Windows.Forms.PictureBox();
+            this.btnAppetizerFavourite = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataAppetizer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAppetizer)).BeginInit();
             this.SuspendLayout();
@@ -110,12 +112,24 @@ namespace RecipesCatalog.Forms
             this.picBoxAppetizer.TabIndex = 11;
             this.picBoxAppetizer.TabStop = false;
             // 
+            // btnAppetizerFavourite
+            // 
+            this.btnAppetizerFavourite.FlatAppearance.BorderSize = 0;
+            this.btnAppetizerFavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppetizerFavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnAppetizerFavourite.Image")));
+            this.btnAppetizerFavourite.Location = new System.Drawing.Point(370, 397);
+            this.btnAppetizerFavourite.Name = "btnAppetizerFavourite";
+            this.btnAppetizerFavourite.Size = new System.Drawing.Size(50, 40);
+            this.btnAppetizerFavourite.TabIndex = 13;
+            this.btnAppetizerFavourite.UseVisualStyleBackColor = true;
+            // 
             // AppetizerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(820, 471);
+            this.Controls.Add(this.btnAppetizerFavourite);
             this.Controls.Add(this.btnAppetizerUnfavourite);
             this.Controls.Add(this.picBoxAppetizer);
             this.Controls.Add(this.btnAddAppetizer);
@@ -125,6 +139,7 @@ namespace RecipesCatalog.Forms
             this.Controls.Add(this.dataAppetizer);
             this.Name = "AppetizerForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.AppetizerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataAppetizer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAppetizer)).EndInit();
             this.ResumeLayout(false);
@@ -141,5 +156,6 @@ namespace RecipesCatalog.Forms
         private System.Windows.Forms.Button btnAddAppetizer;
         private System.Windows.Forms.Button btnRemoveAppetizer;
         private System.Windows.Forms.Button btnOpenAppetizer;
+        private System.Windows.Forms.Button btnAppetizerFavourite;
     }
 }
