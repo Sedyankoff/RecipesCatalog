@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(349, 12);
+            this.label1.Location = new System.Drawing.Point(439, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 28);
             this.label1.TabIndex = 0;
@@ -64,7 +64,7 @@
             "Appetizer",
             "Main Course",
             "Desert"});
-            this.comboBoxRecipeType.Location = new System.Drawing.Point(505, 9);
+            this.comboBoxRecipeType.Location = new System.Drawing.Point(595, 27);
             this.comboBoxRecipeType.Name = "comboBoxRecipeType";
             this.comboBoxRecipeType.Size = new System.Drawing.Size(121, 31);
             this.comboBoxRecipeType.TabIndex = 1;
@@ -82,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(347, 56);
+            this.label2.Location = new System.Drawing.Point(437, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 28);
             this.label2.TabIndex = 3;
@@ -91,7 +91,7 @@
             // txtBoxRecipeName
             // 
             this.txtBoxRecipeName.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxRecipeName.Location = new System.Drawing.Point(505, 53);
+            this.txtBoxRecipeName.Location = new System.Drawing.Point(595, 71);
             this.txtBoxRecipeName.Multiline = true;
             this.txtBoxRecipeName.Name = "txtBoxRecipeName";
             this.txtBoxRecipeName.Size = new System.Drawing.Size(121, 28);
@@ -101,7 +101,7 @@
             // 
             this.lblSelectProduct.AutoSize = true;
             this.lblSelectProduct.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectProduct.Location = new System.Drawing.Point(347, 105);
+            this.lblSelectProduct.Location = new System.Drawing.Point(437, 123);
             this.lblSelectProduct.Name = "lblSelectProduct";
             this.lblSelectProduct.Size = new System.Drawing.Size(142, 28);
             this.lblSelectProduct.TabIndex = 5;
@@ -117,7 +117,7 @@
             "Appetizer",
             "Main Course",
             "Desert"});
-            this.comboBoxRecipeProducts.Location = new System.Drawing.Point(505, 102);
+            this.comboBoxRecipeProducts.Location = new System.Drawing.Point(595, 120);
             this.comboBoxRecipeProducts.Name = "comboBoxRecipeProducts";
             this.comboBoxRecipeProducts.Size = new System.Drawing.Size(121, 31);
             this.comboBoxRecipeProducts.TabIndex = 6;
@@ -125,7 +125,7 @@
             // btnAddProductRecipe
             // 
             this.btnAddProductRecipe.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProductRecipe.Location = new System.Drawing.Point(348, 204);
+            this.btnAddProductRecipe.Location = new System.Drawing.Point(438, 222);
             this.btnAddProductRecipe.Name = "btnAddProductRecipe";
             this.btnAddProductRecipe.Size = new System.Drawing.Size(129, 37);
             this.btnAddProductRecipe.TabIndex = 7;
@@ -135,7 +135,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(497, 204);
+            this.button2.Location = new System.Drawing.Point(587, 222);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 37);
             this.button2.TabIndex = 8;
@@ -146,7 +146,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(343, 155);
+            this.label3.Location = new System.Drawing.Point(433, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 28);
             this.label3.TabIndex = 9;
@@ -155,7 +155,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(505, 155);
+            this.textBox2.Location = new System.Drawing.Point(595, 173);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 28);
