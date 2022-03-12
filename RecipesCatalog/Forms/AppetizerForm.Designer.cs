@@ -62,6 +62,7 @@ namespace RecipesCatalog.Forms
             // 
             // btnAddAppetizer
             // 
+            this.btnAddAppetizer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddAppetizer.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddAppetizer.Location = new System.Drawing.Point(137, 397);
             this.btnAddAppetizer.Name = "btnAddAppetizer";
@@ -72,6 +73,7 @@ namespace RecipesCatalog.Forms
             // 
             // btnRemoveAppetizer
             // 
+            this.btnRemoveAppetizer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveAppetizer.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRemoveAppetizer.Location = new System.Drawing.Point(255, 397);
             this.btnRemoveAppetizer.Name = "btnRemoveAppetizer";
@@ -82,6 +84,7 @@ namespace RecipesCatalog.Forms
             // 
             // btnOpenAppetizer
             // 
+            this.btnOpenAppetizer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenAppetizer.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnOpenAppetizer.Location = new System.Drawing.Point(18, 397);
             this.btnOpenAppetizer.Name = "btnOpenAppetizer";
@@ -93,6 +96,7 @@ namespace RecipesCatalog.Forms
             // btnAppetizerUnfavourite
             // 
             this.btnAppetizerUnfavourite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.btnAppetizerUnfavourite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAppetizerUnfavourite.FlatAppearance.BorderSize = 0;
             this.btnAppetizerUnfavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppetizerUnfavourite.Image = global::RecipesCatalog.Properties.Resources.star;
@@ -114,6 +118,7 @@ namespace RecipesCatalog.Forms
             // 
             // btnAppetizerFavourite
             // 
+            this.btnAppetizerFavourite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAppetizerFavourite.FlatAppearance.BorderSize = 0;
             this.btnAppetizerFavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppetizerFavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnAppetizerFavourite.Image")));

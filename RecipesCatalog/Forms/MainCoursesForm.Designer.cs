@@ -44,6 +44,7 @@ namespace RecipesCatalog.Forms
             // 
             // btnAddMainCourses
             // 
+            this.btnAddMainCourses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddMainCourses.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddMainCourses.Location = new System.Drawing.Point(137, 397);
             this.btnAddMainCourses.Name = "btnAddMainCourses";
@@ -54,6 +55,7 @@ namespace RecipesCatalog.Forms
             // 
             // btnRemoveMainCourses
             // 
+            this.btnRemoveMainCourses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveMainCourses.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRemoveMainCourses.Location = new System.Drawing.Point(255, 397);
             this.btnRemoveMainCourses.Name = "btnRemoveMainCourses";
@@ -64,6 +66,7 @@ namespace RecipesCatalog.Forms
             // 
             // btnOpenMainCourses
             // 
+            this.btnOpenMainCourses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenMainCourses.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnOpenMainCourses.Location = new System.Drawing.Point(18, 397);
             this.btnOpenMainCourses.Name = "btnOpenMainCourses";
@@ -82,6 +85,7 @@ namespace RecipesCatalog.Forms
             // 
             // btnMainCoursesUnfavourite
             // 
+            this.btnMainCoursesUnfavourite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMainCoursesUnfavourite.FlatAppearance.BorderSize = 0;
             this.btnMainCoursesUnfavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMainCoursesUnfavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnMainCoursesUnfavourite.Image")));
@@ -113,6 +117,7 @@ namespace RecipesCatalog.Forms
             // 
             // btnMainCoursesFavourite
             // 
+            this.btnMainCoursesFavourite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMainCoursesFavourite.FlatAppearance.BorderSize = 0;
             this.btnMainCoursesFavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMainCoursesFavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnMainCoursesFavourite.Image")));

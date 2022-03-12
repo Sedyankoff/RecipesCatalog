@@ -119,6 +119,7 @@
             // 
             // btnAddProductRecipe
             // 
+            this.btnAddProductRecipe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddProductRecipe.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddProductRecipe.Location = new System.Drawing.Point(438, 276);
             this.btnAddProductRecipe.Name = "btnAddProductRecipe";
@@ -129,6 +130,7 @@
             // 
             // btnAddRecipe
             // 
+            this.btnAddRecipe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddRecipe.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddRecipe.Location = new System.Drawing.Point(587, 276);
             this.btnAddRecipe.Name = "btnAddRecipe";

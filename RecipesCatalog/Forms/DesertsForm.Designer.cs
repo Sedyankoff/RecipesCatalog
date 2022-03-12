@@ -135,6 +135,7 @@
             this.Controls.Add(this.btnOpenDesert);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataDeserts);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "DesertsForm";
             this.Text = "DesertsForm";
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSalads)).EndInit();

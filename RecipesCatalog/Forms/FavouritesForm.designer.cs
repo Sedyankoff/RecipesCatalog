@@ -57,6 +57,7 @@ namespace RecipesCatalog.Forms
             // 
             // btnOpenFavourite
             // 
+            this.btnOpenFavourite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenFavourite.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnOpenFavourite.Location = new System.Drawing.Point(84, 394);
             this.btnOpenFavourite.Name = "btnOpenFavourite";
@@ -68,6 +69,7 @@ namespace RecipesCatalog.Forms
             // 
             // btnRemoveFavourite
             // 
+            this.btnRemoveFavourite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveFavourite.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRemoveFavourite.Location = new System.Drawing.Point(241, 394);
             this.btnRemoveFavourite.Name = "btnRemoveFavourite";

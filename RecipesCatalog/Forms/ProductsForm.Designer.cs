@@ -48,6 +48,7 @@
             // 
             // btnInsertProduct
             // 
+            this.btnInsertProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInsertProduct.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertProduct.Location = new System.Drawing.Point(40, 397);
             this.btnInsertProduct.Name = "btnInsertProduct";
@@ -78,6 +79,7 @@
             // 
             // btnUpdateProduct
             // 
+            this.btnUpdateProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateProduct.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateProduct.Location = new System.Drawing.Point(168, 397);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
@@ -89,6 +91,7 @@
             // 
             // btnRemoveProduct
             // 
+            this.btnRemoveProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveProduct.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveProduct.Location = new System.Drawing.Point(294, 397);
             this.btnRemoveProduct.Name = "btnRemoveProduct";

@@ -61,6 +61,7 @@
             // 
             // btnOpenSalad
             // 
+            this.btnOpenSalad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenSalad.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnOpenSalad.Location = new System.Drawing.Point(18, 397);
             this.btnOpenSalad.Name = "btnOpenSalad";
@@ -71,6 +72,7 @@
             // 
             // btnRemoveSalad
             // 
+            this.btnRemoveSalad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveSalad.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRemoveSalad.Location = new System.Drawing.Point(255, 397);
             this.btnRemoveSalad.Name = "btnRemoveSalad";
@@ -81,6 +83,7 @@
             // 
             // btnAddSalad
             // 
+            this.btnAddSalad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddSalad.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddSalad.Location = new System.Drawing.Point(137, 397);
             this.btnAddSalad.Name = "btnAddSalad";
@@ -91,10 +94,11 @@
             // 
             // btnSaladUnfavourite
             // 
+            this.btnSaladUnfavourite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSaladUnfavourite.FlatAppearance.BorderSize = 0;
             this.btnSaladUnfavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaladUnfavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnSaladUnfavourite.Image")));
-            this.btnSaladUnfavourite.Location = new System.Drawing.Point(371, 397);
+            this.btnSaladUnfavourite.Location = new System.Drawing.Point(370, 397);
             this.btnSaladUnfavourite.Name = "btnSaladUnfavourite";
             this.btnSaladUnfavourite.Size = new System.Drawing.Size(50, 40);
             this.btnSaladUnfavourite.TabIndex = 7;
@@ -103,6 +107,7 @@
             // 
             // btnSaladFavourite
             // 
+            this.btnSaladFavourite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSaladFavourite.FlatAppearance.BorderSize = 0;
             this.btnSaladFavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaladFavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnSaladFavourite.Image")));
