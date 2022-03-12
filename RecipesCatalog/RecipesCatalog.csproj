@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>RecipesCatalog</RootNamespace>
     <AssemblyName>RecipesCatalog</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -65,6 +65,12 @@
     <Compile Include="Forms\FavouritesForm.designer.cs">
       <DependentUpon>FavouritesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AppetizerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AppetizerForm.Designer.cs">
+      <DependentUpon>AppetizerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddRecipeForm.resx">
       <DependentUpon>AddRecipeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AppetizerForm.resx">
+      <DependentUpon>AppetizerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FavouritesForm.resx">
       <DependentUpon>FavouritesForm.cs</DependentUpon>
@@ -173,6 +182,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logoFinished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

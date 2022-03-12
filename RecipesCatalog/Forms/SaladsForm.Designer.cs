@@ -34,9 +34,9 @@
             this.btnOpenSalad = new System.Windows.Forms.Button();
             this.btnRemoveSalad = new System.Windows.Forms.Button();
             this.btnAddSalad = new System.Windows.Forms.Button();
-            this.picBoxSalads = new System.Windows.Forms.PictureBox();
-            this.btnSaladFavourite = new System.Windows.Forms.Button();
             this.btnSaladUnfavourite = new System.Windows.Forms.Button();
+            this.btnSaladFavourite = new System.Windows.Forms.Button();
+            this.picBoxSalads = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataSalads)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSalads)).BeginInit();
             this.SuspendLayout();
@@ -89,14 +89,17 @@
             this.btnAddSalad.Text = "Add";
             this.btnAddSalad.UseVisualStyleBackColor = true;
             // 
-            // picBoxSalads
+            // btnSaladUnfavourite
             // 
-            this.picBoxSalads.Image = global::RecipesCatalog.Properties.Resources.logoFinished;
-            this.picBoxSalads.Location = new System.Drawing.Point(88, 79);
-            this.picBoxSalads.Name = "picBoxSalads";
-            this.picBoxSalads.Size = new System.Drawing.Size(258, 278);
-            this.picBoxSalads.TabIndex = 5;
-            this.picBoxSalads.TabStop = false;
+            this.btnSaladUnfavourite.FlatAppearance.BorderSize = 0;
+            this.btnSaladUnfavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaladUnfavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnSaladUnfavourite.Image")));
+            this.btnSaladUnfavourite.Location = new System.Drawing.Point(370, 397);
+            this.btnSaladUnfavourite.Name = "btnSaladUnfavourite";
+            this.btnSaladUnfavourite.Size = new System.Drawing.Size(50, 40);
+            this.btnSaladUnfavourite.TabIndex = 7;
+            this.btnSaladUnfavourite.UseVisualStyleBackColor = true;
+            this.btnSaladUnfavourite.Visible = false;
             // 
             // btnSaladFavourite
             // 
@@ -109,17 +112,14 @@
             this.btnSaladFavourite.TabIndex = 6;
             this.btnSaladFavourite.UseVisualStyleBackColor = true;
             // 
-            // btnSaladUnfavourite
+            // picBoxSalads
             // 
-            this.btnSaladUnfavourite.FlatAppearance.BorderSize = 0;
-            this.btnSaladUnfavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaladUnfavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnSaladUnfavourite.Image")));
-            this.btnSaladUnfavourite.Location = new System.Drawing.Point(370, 397);
-            this.btnSaladUnfavourite.Name = "btnSaladUnfavourite";
-            this.btnSaladUnfavourite.Size = new System.Drawing.Size(50, 40);
-            this.btnSaladUnfavourite.TabIndex = 7;
-            this.btnSaladUnfavourite.UseVisualStyleBackColor = true;
-            this.btnSaladUnfavourite.Visible = false;
+            this.picBoxSalads.Image = global::RecipesCatalog.Properties.Resources.logoFinished;
+            this.picBoxSalads.Location = new System.Drawing.Point(88, 79);
+            this.picBoxSalads.Name = "picBoxSalads";
+            this.picBoxSalads.Size = new System.Drawing.Size(258, 278);
+            this.picBoxSalads.TabIndex = 5;
+            this.picBoxSalads.TabStop = false;
             // 
             // SaladsForm
             // 
