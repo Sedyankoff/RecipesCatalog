@@ -135,6 +135,7 @@
             this.btnAddRecipe.Text = " Add Recipe";
             this.btnAddRecipe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddRecipe.UseVisualStyleBackColor = true;
+            this.btnAddRecipe.Click += new System.EventHandler(this.btnAddRecipe_Click);
             // 
             // btnCourses
             // 
