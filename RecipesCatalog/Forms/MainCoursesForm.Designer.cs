@@ -52,6 +52,7 @@ namespace RecipesCatalog.Forms
             this.btnAddMainCourses.TabIndex = 12;
             this.btnAddMainCourses.Text = "Add";
             this.btnAddMainCourses.UseVisualStyleBackColor = true;
+            this.btnAddMainCourses.Click += new System.EventHandler(this.btnAddMainCourses_Click);
             // 
             // btnRemoveMainCourses
             // 
@@ -98,7 +99,6 @@ namespace RecipesCatalog.Forms
             // 
             // picBoxMainCourses
             // 
-            this.picBoxMainCourses.Image = global::RecipesCatalog.Properties.Resources.logoFinished;
             this.picBoxMainCourses.Location = new System.Drawing.Point(88, 79);
             this.picBoxMainCourses.Name = "picBoxMainCourses";
             this.picBoxMainCourses.Size = new System.Drawing.Size(258, 278);

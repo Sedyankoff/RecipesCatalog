@@ -91,6 +91,7 @@
             this.btnAddSalad.TabIndex = 4;
             this.btnAddSalad.Text = "Add";
             this.btnAddSalad.UseVisualStyleBackColor = true;
+            this.btnAddSalad.Click += new System.EventHandler(this.btnAddSalad_Click);
             // 
             // btnSaladUnfavourite
             // 

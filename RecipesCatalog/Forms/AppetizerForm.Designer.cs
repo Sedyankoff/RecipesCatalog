@@ -70,6 +70,7 @@ namespace RecipesCatalog.Forms
             this.btnAddAppetizer.TabIndex = 10;
             this.btnAddAppetizer.Text = "Add";
             this.btnAddAppetizer.UseVisualStyleBackColor = true;
+            this.btnAddAppetizer.Click += new System.EventHandler(this.btnAddAppetizer_Click);
             // 
             // btnRemoveAppetizer
             // 
@@ -81,6 +82,7 @@ namespace RecipesCatalog.Forms
             this.btnRemoveAppetizer.TabIndex = 9;
             this.btnRemoveAppetizer.Text = "Remove";
             this.btnRemoveAppetizer.UseVisualStyleBackColor = true;
+            this.btnRemoveAppetizer.Click += new System.EventHandler(this.btnRemoveAppetizer_Click);
             // 
             // btnOpenAppetizer
             // 

@@ -85,6 +85,7 @@
             this.btnAddDesert.TabIndex = 12;
             this.btnAddDesert.Text = "Add";
             this.btnAddDesert.UseVisualStyleBackColor = true;
+            this.btnAddDesert.Click += new System.EventHandler(this.btnAddDesert_Click);
             // 
             // btnRemoveDesert
             // 
