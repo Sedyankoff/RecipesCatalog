@@ -56,6 +56,7 @@
             this.btnInsertProduct.TabIndex = 0;
             this.btnInsertProduct.Text = "Insert";
             this.btnInsertProduct.UseVisualStyleBackColor = true;
+            this.btnInsertProduct.Click += new System.EventHandler(this.btnInsertProduct_Click);
             // 
             // label1
             // 
@@ -99,6 +100,7 @@
             this.btnRemoveProduct.TabIndex = 4;
             this.btnRemoveProduct.Text = "Remove";
             this.btnRemoveProduct.UseVisualStyleBackColor = true;
+            this.btnRemoveProduct.Click += new System.EventHandler(this.btnRemoveProduct_Click);
             // 
             // txtBoxProductName
             // 
