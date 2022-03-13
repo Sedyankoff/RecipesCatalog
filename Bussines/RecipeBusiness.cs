@@ -10,11 +10,11 @@ namespace RecipesCatalog.Business
 {
     class RecipeBusiness
     {
-        private RecipeContext recipeContext;
+        private RecipeCatalogContext recipeContext;
 
         public List<Recipe> GetAll()
         {
-            using (recipeContext = new RecipeContext())
+            using (recipeContext = new RecipeCatalogContext())
             {
                 return recipeContext.Recipes.ToList();
             }
@@ -22,7 +22,7 @@ namespace RecipesCatalog.Business
 
         public Recipe Get(int id)
         {
-            using (recipeContext = new RecipeContext())
+            using (recipeContext = new RecipeCatalogContext())
             {
                 return recipeContext.Recipes.Find(id);
 
@@ -31,7 +31,7 @@ namespace RecipesCatalog.Business
 
         public void Add(Recipe recipe)
         {
-            using (recipeContext = new RecipeContext())
+            using (recipeContext = new RecipeCatalogContext())
             {
                 recipeContext.Recipes.Add(recipe);
                 recipeContext.SaveChanges();
@@ -41,7 +41,7 @@ namespace RecipesCatalog.Business
 
         public void Update(Recipe recipe)
         {
-            using (recipeContext = new RecipeContext())
+            using (recipeContext = new RecipeCatalogContext())
             {
 
                 var item = recipeContext.Recipes.Find(recipe.Id);
@@ -56,7 +56,7 @@ namespace RecipesCatalog.Business
 
         public void Delete(int id)
         {
-            using (recipeContext = new RecipeContext())
+            using (recipeContext = new RecipeCatalogContext())
             {
                 var recipe = recipeContext.Recipes.Find(id);
                 if (recipe != null)

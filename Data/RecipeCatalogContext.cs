@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace RecipesCatalog.Data
 {
-    public class ProductContext : DbContext
+    public class RecipeCatalogContext : DbContext
     {
-        public ProductContext()
-            : base("name=ProductContext")
+        public RecipeCatalogContext()
+            : base("name=RecipeContext") 
         {
-
+            
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Recipe> Recipes { get; set; }
     }
 }

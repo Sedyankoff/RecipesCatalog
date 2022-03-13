@@ -19,6 +19,8 @@ namespace RecipesCatalog.Forms
         public ProductsForm()
         {
             InitializeComponent();
+            UpdateGrid();
+            ResetSelect();
         }
         private void UpdateGrid()
         {
@@ -66,23 +68,33 @@ namespace RecipesCatalog.Forms
                 var item = dataProducts.SelectedRows[0].Cells;
                 var id = int.Parse(item[0].Value.ToString());
                 editId = id;
-                UpdateTextBoxes(id);
-                DisableSelect();
+                if (txtBoxProductType.Text != string.Empty && txtBoxProductName.Text!=string.Empty)
+                {
+                    Product editedProduct = GetEditedProduct();
+                    productBusiness.Update(editedProduct);
+                    UpdateTextBoxes(editId);
+                    UpdateGrid();
+                    Clear();
+                    DisableSelect();
+                }
             }
         }
 
         private void btnInsertProduct_Click(object sender, EventArgs e)
         {
-            var name = txtBoxProductName.Text;
-            var type = txtBoxProductType.Text;
+            if (txtBoxProductType.Text != string.Empty && txtBoxProductName.Text != string.Empty)
+            {
+                var name = txtBoxProductName.Text;
+                var type = txtBoxProductType.Text;
 
-            Product product = new Product();
-            product.Name = name;
-            product.Type = type;
+                Product product = new Product();
+                product.Name = name;
+                product.Type = type;
 
-            productBusiness.Add(product);
-            UpdateGrid();
-            Clear();
+                productBusiness.AddProduct(product);
+                UpdateGrid();
+                Clear();
+            }
         }
 
         private void btnRemoveProduct_Click(object sender, EventArgs e)
@@ -91,9 +103,10 @@ namespace RecipesCatalog.Forms
             {
                 var item = dataProducts.SelectedRows[0].Cells;
                 var id = int.Parse(item[0].Value.ToString());
-                productBusiness.Delete(id);
+                productBusiness.DeleteProduct(id);
                 UpdateGrid();
                 ResetSelect();
+                Clear();
             }
         }
     }

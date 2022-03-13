@@ -12,7 +12,7 @@ namespace RecipesCatalog
 {
     public partial class Form1 : Form
     {
-        private Button currentButton;
+
         private Form activeForm;
 
         public Form1()
