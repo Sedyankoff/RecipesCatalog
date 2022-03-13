@@ -99,8 +99,8 @@ namespace RecipesCatalog.Forms
             this.btnAppetizerUnfavourite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAppetizerUnfavourite.FlatAppearance.BorderSize = 0;
             this.btnAppetizerUnfavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppetizerUnfavourite.Image = global::RecipesCatalog.Properties.Resources.star;
-            this.btnAppetizerUnfavourite.Location = new System.Drawing.Point(370, 397);
+            this.btnAppetizerUnfavourite.Image = ((System.Drawing.Image)(resources.GetObject("btnAppetizerUnfavourite.Image")));
+            this.btnAppetizerUnfavourite.Location = new System.Drawing.Point(370, 398);
             this.btnAppetizerUnfavourite.Name = "btnAppetizerUnfavourite";
             this.btnAppetizerUnfavourite.Size = new System.Drawing.Size(50, 40);
             this.btnAppetizerUnfavourite.TabIndex = 12;
@@ -109,7 +109,7 @@ namespace RecipesCatalog.Forms
             // 
             // picBoxAppetizer
             // 
-            this.picBoxAppetizer.Image = global::RecipesCatalog.Properties.Resources.logoFinished;
+            this.picBoxAppetizer.Image = ((System.Drawing.Image)(resources.GetObject("picBoxAppetizer.Image")));
             this.picBoxAppetizer.Location = new System.Drawing.Point(88, 79);
             this.picBoxAppetizer.Name = "picBoxAppetizer";
             this.picBoxAppetizer.Size = new System.Drawing.Size(258, 278);

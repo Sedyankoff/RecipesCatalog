@@ -119,7 +119,7 @@
             // 
             // picBoxSalads
             // 
-            this.picBoxSalads.Image = global::RecipesCatalog.Properties.Resources.logoFinished;
+            this.picBoxSalads.Image = ((System.Drawing.Image)(resources.GetObject("picBoxSalads.Image")));
             this.picBoxSalads.Location = new System.Drawing.Point(88, 79);
             this.picBoxSalads.Name = "picBoxSalads";
             this.picBoxSalads.Size = new System.Drawing.Size(258, 278);

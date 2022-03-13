@@ -29,6 +29,7 @@ namespace RecipesCatalog.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FavouritesForm));
             this.dataFavourites = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnOpenFavourite = new System.Windows.Forms.Button();
@@ -48,7 +49,7 @@ namespace RecipesCatalog.Forms
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RecipesCatalog.Properties.Resources.logoFinished;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(84, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(257, 232);

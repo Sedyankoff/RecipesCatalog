@@ -94,7 +94,7 @@
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(200, 60);
             this.btnProducts.TabIndex = 7;
-            this.btnProducts.Text = "Products";
+            this.btnProducts.Text = " Products";
             this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProducts.UseVisualStyleBackColor = true;
             this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
