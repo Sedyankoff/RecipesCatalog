@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblOutputProducts = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             // 
             this.btnInsertProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInsertProduct.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertProduct.Location = new System.Drawing.Point(40, 397);
+            this.btnInsertProduct.Location = new System.Drawing.Point(40, 374);
             this.btnInsertProduct.Name = "btnInsertProduct";
             this.btnInsertProduct.Size = new System.Drawing.Size(95, 40);
             this.btnInsertProduct.TabIndex = 0;
@@ -82,7 +83,7 @@
             // 
             this.btnUpdateProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateProduct.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateProduct.Location = new System.Drawing.Point(168, 397);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(168, 374);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(95, 40);
             this.btnUpdateProduct.TabIndex = 3;
@@ -94,7 +95,7 @@
             // 
             this.btnRemoveProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveProduct.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveProduct.Location = new System.Drawing.Point(294, 397);
+            this.btnRemoveProduct.Location = new System.Drawing.Point(294, 374);
             this.btnRemoveProduct.Name = "btnRemoveProduct";
             this.btnRemoveProduct.Size = new System.Drawing.Size(95, 40);
             this.btnRemoveProduct.TabIndex = 4;
@@ -177,12 +178,23 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // lblOutputProducts
+            // 
+            this.lblOutputProducts.AutoSize = true;
+            this.lblOutputProducts.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutputProducts.Location = new System.Drawing.Point(35, 434);
+            this.lblOutputProducts.Name = "lblOutputProducts";
+            this.lblOutputProducts.Size = new System.Drawing.Size(60, 28);
+            this.lblOutputProducts.TabIndex = 10;
+            this.lblOutputProducts.Text = "label7";
+            // 
             // ProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(820, 471);
+            this.Controls.Add(this.lblOutputProducts);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -220,5 +232,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblOutputProducts;
     }
 }
