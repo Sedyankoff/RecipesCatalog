@@ -99,6 +99,7 @@ namespace RecipesCatalog.Forms
             // 
             // picBoxMainCourses
             // 
+            this.picBoxMainCourses.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMainCourses.Image")));
             this.picBoxMainCourses.Location = new System.Drawing.Point(88, 79);
             this.picBoxMainCourses.Name = "picBoxMainCourses";
             this.picBoxMainCourses.Size = new System.Drawing.Size(258, 278);

@@ -61,9 +61,9 @@ namespace RecipesCatalog.Forms
                 {
                     recipeProducts.Add(cboxRecipeProducts.SelectedItem.ToString());
                     lblOutputAddedRecipe.Text = "Product added successfully!";
-                } 
+                }
             }
-            
+
         }
 
         private void Clear()
@@ -71,6 +71,7 @@ namespace RecipesCatalog.Forms
             cboxRecipeType.SelectedItem = null;
             txtRecipeName.Text = string.Empty;
             cboxRecipeProducts.SelectedItem = null;
+            txtPreparation.Text = string.Empty;
         }
 
         private void btnAddRecipe_Click(object sender, EventArgs e)
@@ -89,7 +90,7 @@ namespace RecipesCatalog.Forms
                 {
                     if (recipeProducts.Count == 0)
                     {
-                        lblOutputAddedRecipe.Text = "A recipe should contain at least one product!";
+                        lblOutputAddedRecipe.Text = "Add at least one product!";
                     }
                     else
                     {
@@ -99,31 +100,49 @@ namespace RecipesCatalog.Forms
                         }
                         else
                         {
-                            Recipe recipe = new Recipe();
-                            recipe.Type = cboxRecipeType.SelectedItem.ToString();
-                            recipe.Name = txtRecipeName.Text;
-                            recipe.Preparation = txtPreparation.Text;
                             con.Open();
-                            string commandString = "SELECT * from dbo.Products WHERE Name = '@productName'";
-                            SqlCommand cmd = new SqlCommand(commandString, con);
-                            foreach (var productName in recipeProducts)
+                            string commandStringNameCheck = "SELECT Name from dbo.Recipes";
+                            SqlCommand cmd = new SqlCommand(commandStringNameCheck, con);
+                            SqlDataReader dr = cmd.ExecuteReader();
+                            bool found = false;
+                            while (dr.Read())
                             {
-                                cmd.Parameters.AddWithValue("@productName", productName);
-                                SqlDataReader dr = cmd.ExecuteReader();
-                                while (dr.Read())
+                                if (txtRecipeName.Text == dr["Name"].ToString())
                                 {
-                                    product.Id = int.Parse(dr["Id"].ToString());
-                                    product.Name = dr["Name"].ToString();
-                                    product.Type = dr["Type"].ToString();
+                                    lblOutputAddedRecipe.Text = "There is already a recipe with that name!";
+                                    found = true;
+                                    break;
                                 }
-                                recipe.Products.Add(product);
                             }
-                            con.Close();
-                            recipeProducts.Clear();
-                            product = new Product();
-                            recipeBusiness.Add(recipe);
-                            Clear();
-                            lblOutputAddedRecipe.Text = "The recipe was successfully added!";
+
+                            if (!found)
+                            {
+                                Recipe recipe = new Recipe();
+                                recipe.Type = cboxRecipeType.SelectedItem.ToString();
+                                recipe.Name = txtRecipeName.Text;
+                                recipe.Preparation = txtPreparation.Text;
+                                string commandString = "SELECT * from dbo.Products WHERE Name = '@productName'";
+                                cmd = new SqlCommand(commandString, con);
+                                dr = cmd.ExecuteReader();
+                                foreach (var productName in recipeProducts)
+                                {
+                                    cmd.Parameters.AddWithValue("@productName", productName);
+                                    dr = cmd.ExecuteReader();
+                                    while (dr.Read())
+                                    {
+                                        product.Id = int.Parse(dr["Id"].ToString());
+                                        product.Name = dr["Name"].ToString();
+                                        product.Type = dr["Type"].ToString();
+                                    }
+                                    recipe.Products.Add(product);
+                                }
+                                con.Close();
+                                recipeProducts.Clear();
+                                product = new Product();
+                                recipeBusiness.Add(recipe);
+                                Clear();
+                                MessageBox.Show("Successfully added!");
+                            }
                         }
                     }
                 }
