@@ -38,9 +38,9 @@
             this.cboxRecipeProducts = new System.Windows.Forms.ComboBox();
             this.btnAddProductRecipe = new System.Windows.Forms.Button();
             this.btnAddRecipe = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtProductAmount = new System.Windows.Forms.TextBox();
             this.lblOutputAddedRecipe = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPreparation = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(433, 84);
+            this.label1.Location = new System.Drawing.Point(447, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 28);
             this.label1.TabIndex = 0;
@@ -64,7 +64,7 @@
             "Appetizer",
             "Main Course",
             "Desert"});
-            this.cboxRecipeType.Location = new System.Drawing.Point(595, 81);
+            this.cboxRecipeType.Location = new System.Drawing.Point(609, 119);
             this.cboxRecipeType.Name = "cboxRecipeType";
             this.cboxRecipeType.Size = new System.Drawing.Size(121, 31);
             this.cboxRecipeType.TabIndex = 1;
@@ -72,7 +72,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(72, 57);
+            this.pictureBox1.Location = new System.Drawing.Point(86, 57);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(264, 262);
             this.pictureBox1.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(433, 128);
+            this.label2.Location = new System.Drawing.Point(447, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 28);
             this.label2.TabIndex = 3;
@@ -91,7 +91,7 @@
             // txtRecipeName
             // 
             this.txtRecipeName.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRecipeName.Location = new System.Drawing.Point(595, 129);
+            this.txtRecipeName.Location = new System.Drawing.Point(609, 167);
             this.txtRecipeName.Multiline = true;
             this.txtRecipeName.Name = "txtRecipeName";
             this.txtRecipeName.Size = new System.Drawing.Size(121, 31);
@@ -101,7 +101,7 @@
             // 
             this.lblSelectProduct.AutoSize = true;
             this.lblSelectProduct.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectProduct.Location = new System.Drawing.Point(433, 177);
+            this.lblSelectProduct.Location = new System.Drawing.Point(447, 215);
             this.lblSelectProduct.Name = "lblSelectProduct";
             this.lblSelectProduct.Size = new System.Drawing.Size(142, 28);
             this.lblSelectProduct.TabIndex = 5;
@@ -112,61 +112,64 @@
             this.cboxRecipeProducts.BackColor = System.Drawing.Color.White;
             this.cboxRecipeProducts.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxRecipeProducts.FormattingEnabled = true;
-            this.cboxRecipeProducts.Location = new System.Drawing.Point(595, 177);
+            this.cboxRecipeProducts.Location = new System.Drawing.Point(609, 215);
             this.cboxRecipeProducts.Name = "cboxRecipeProducts";
             this.cboxRecipeProducts.Size = new System.Drawing.Size(121, 31);
             this.cboxRecipeProducts.TabIndex = 6;
+            this.cboxRecipeProducts.SelectedIndexChanged += new System.EventHandler(this.cboxRecipeProducts_SelectedIndexChanged);
             // 
             // btnAddProductRecipe
             // 
             this.btnAddProductRecipe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddProductRecipe.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddProductRecipe.Location = new System.Drawing.Point(438, 276);
+            this.btnAddProductRecipe.Location = new System.Drawing.Point(452, 276);
             this.btnAddProductRecipe.Name = "btnAddProductRecipe";
             this.btnAddProductRecipe.Size = new System.Drawing.Size(129, 37);
             this.btnAddProductRecipe.TabIndex = 7;
             this.btnAddProductRecipe.Text = "Add Product";
             this.btnAddProductRecipe.UseVisualStyleBackColor = true;
+            this.btnAddProductRecipe.Click += new System.EventHandler(this.btnAddProductRecipe_Click);
             // 
             // btnAddRecipe
             // 
             this.btnAddRecipe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddRecipe.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddRecipe.Location = new System.Drawing.Point(587, 276);
+            this.btnAddRecipe.Location = new System.Drawing.Point(601, 276);
             this.btnAddRecipe.Name = "btnAddRecipe";
             this.btnAddRecipe.Size = new System.Drawing.Size(129, 37);
             this.btnAddRecipe.TabIndex = 8;
             this.btnAddRecipe.Text = "Add Recipe";
             this.btnAddRecipe.UseVisualStyleBackColor = true;
+            this.btnAddRecipe.Click += new System.EventHandler(this.btnAddRecipe_Click);
+            // 
+            // lblOutputAddedRecipe
+            // 
+            this.lblOutputAddedRecipe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOutputAddedRecipe.AutoSize = true;
+            this.lblOutputAddedRecipe.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutputAddedRecipe.Location = new System.Drawing.Point(254, 28);
+            this.lblOutputAddedRecipe.Name = "lblOutputAddedRecipe";
+            this.lblOutputAddedRecipe.Size = new System.Drawing.Size(0, 33);
+            this.lblOutputAddedRecipe.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(433, 227);
+            this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(81, 332);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 28);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Product amount:";
+            this.label3.Size = new System.Drawing.Size(113, 28);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Preparation:";
             // 
-            // txtProductAmount
+            // txtPreparation
             // 
-            this.txtProductAmount.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductAmount.Location = new System.Drawing.Point(595, 227);
-            this.txtProductAmount.Multiline = true;
-            this.txtProductAmount.Name = "txtProductAmount";
-            this.txtProductAmount.Size = new System.Drawing.Size(121, 31);
-            this.txtProductAmount.TabIndex = 11;
-            // 
-            // lblOutputAddedRecipe
-            // 
-            this.lblOutputAddedRecipe.AutoSize = true;
-            this.lblOutputAddedRecipe.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOutputAddedRecipe.Location = new System.Drawing.Point(39, 353);
-            this.lblOutputAddedRecipe.Name = "lblOutputAddedRecipe";
-            this.lblOutputAddedRecipe.Size = new System.Drawing.Size(20, 33);
-            this.lblOutputAddedRecipe.TabIndex = 12;
-            this.lblOutputAddedRecipe.Text = "l";
+            this.txtPreparation.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPreparation.Location = new System.Drawing.Point(86, 366);
+            this.txtPreparation.Multiline = true;
+            this.txtPreparation.Name = "txtPreparation";
+            this.txtPreparation.Size = new System.Drawing.Size(644, 105);
+            this.txtPreparation.TabIndex = 14;
             // 
             // AddRecipeForm
             // 
@@ -174,9 +177,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(820, 471);
-            this.Controls.Add(this.lblOutputAddedRecipe);
-            this.Controls.Add(this.txtProductAmount);
+            this.Controls.Add(this.txtPreparation);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblOutputAddedRecipe);
             this.Controls.Add(this.btnAddRecipe);
             this.Controls.Add(this.btnAddProductRecipe);
             this.Controls.Add(this.cboxRecipeProducts);
@@ -205,8 +208,8 @@
         private System.Windows.Forms.ComboBox cboxRecipeProducts;
         private System.Windows.Forms.Button btnAddProductRecipe;
         private System.Windows.Forms.Button btnAddRecipe;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtProductAmount;
         private System.Windows.Forms.Label lblOutputAddedRecipe;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPreparation;
     }
 }

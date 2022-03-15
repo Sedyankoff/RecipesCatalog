@@ -69,6 +69,7 @@
             this.btnOpenSalad.TabIndex = 2;
             this.btnOpenSalad.Text = "Open";
             this.btnOpenSalad.UseVisualStyleBackColor = true;
+            this.btnOpenSalad.Click += new System.EventHandler(this.btnOpenSalad_Click);
             // 
             // btnRemoveSalad
             // 

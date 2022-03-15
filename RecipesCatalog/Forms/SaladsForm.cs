@@ -14,10 +14,7 @@ namespace RecipesCatalog.Forms
 {
     public partial class SaladsForm : Form
     {
-        private ProductBusiness productBusiness = new ProductBusiness();
-        private int editId = 0;
-
-
+        private RecipeBusiness recipeBusiness = new RecipeBusiness();
 
         public SaladsForm()
         {
@@ -25,9 +22,6 @@ namespace RecipesCatalog.Forms
             UpdateGrid();
             ResetSelect();
         }
-
-
-        ///
 
         private void DisableSelect()
         {
@@ -39,10 +33,10 @@ namespace RecipesCatalog.Forms
             dataSalads.ClearSelection();
             dataSalads.Enabled = true;
         }
-        ///
+        
         private void UpdateGrid()
         {
-            dataSalads.DataSource = productBusiness.GetAll();
+            dataSalads.DataSource = recipeBusiness.GetAll();
             dataSalads.ReadOnly = true;
             dataSalads.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
@@ -53,7 +47,7 @@ namespace RecipesCatalog.Forms
             {
                 var item = dataSalads.SelectedRows[0].Cells;
                 var id = int.Parse(item[0].Value.ToString());
-                productBusiness.DeleteProduct(id);
+                recipeBusiness.Delete(id);
                 UpdateGrid();
                 ResetSelect();
             }
@@ -64,6 +58,11 @@ namespace RecipesCatalog.Forms
             AddRecipeForm addRecipeForm = new AddRecipeForm();
             addRecipeForm.BringToFront();
             addRecipeForm.Show();
+        }
+
+        private void btnOpenSalad_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

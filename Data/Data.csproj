@@ -56,6 +56,14 @@
     <Compile Include="Migrations\202203131247183_initional.designer.cs">
       <DependentUpon>202203131247183_initional.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203151755074_AddedName.cs" />
+    <Compile Include="Migrations\202203151755074_AddedName.designer.cs">
+      <DependentUpon>202203151755074_AddedName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203151911135_recipeChange.cs" />
+    <Compile Include="Migrations\202203151911135_recipeChange.designer.cs">
+      <DependentUpon>202203151911135_recipeChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RecipeCatalogContext.cs" />
     <Compile Include="Models\Product.cs" />
@@ -69,6 +77,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202203131247183_initional.resx">
       <DependentUpon>202203131247183_initional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203151755074_AddedName.resx">
+      <DependentUpon>202203151755074_AddedName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203151911135_recipeChange.resx">
+      <DependentUpon>202203151911135_recipeChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

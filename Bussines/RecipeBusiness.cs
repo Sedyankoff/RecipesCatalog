@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RecipesCatalog.Business
 {
-    class RecipeBusiness
+    public class RecipeBusiness
     {
         private RecipeCatalogContext recipeContext;
 

@@ -8,9 +8,11 @@ namespace RecipesCatalog.Data.Models
 {
     public class Recipe
     {
+        public List<Product> Products = new List<Product>();
         public int Id { get; set; }
         public string Type { get; set; }
-        public List<Product> Products { get; set; }
+        public string Name { get; set; }
+        public string Preparation { get; set; }
 
         public bool IsFavourite = false;
     }
