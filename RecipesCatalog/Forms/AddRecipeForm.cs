@@ -116,6 +116,7 @@ namespace RecipesCatalog.Forms
                             recipe.Name = recipeName;
                             recipe.Preparation = txtPreparation.Text;
                             recipe.Products = String.Join(", ", recipeProducts);
+                            recipe.IsFavourite = false;
 
                             con.Open();
                             string commandString = "SELECT Name,Type from dbo.Recipes";

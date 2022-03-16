@@ -72,6 +72,10 @@
     <Compile Include="Migrations\202203161928152_fixing.designer.cs">
       <DependentUpon>202203161928152_fixing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203162013418_IsFavouriteFix.cs" />
+    <Compile Include="Migrations\202203162013418_IsFavouriteFix.designer.cs">
+      <DependentUpon>202203162013418_IsFavouriteFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RecipeCatalogContext.cs" />
     <Compile Include="Models\Product.cs" />
@@ -97,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203161928152_fixing.resx">
       <DependentUpon>202203161928152_fixing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203162013418_IsFavouriteFix.resx">
+      <DependentUpon>202203162013418_IsFavouriteFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

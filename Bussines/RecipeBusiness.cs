@@ -37,6 +37,24 @@ namespace RecipesCatalog.Business
             }
         }
 
+        public List<Recipe> GetAllFavourites()
+        {
+            using (recipeContext = new RecipeCatalogContext())
+            {
+                List<Recipe> recipes = recipeContext.Recipes.ToList();
+                List<Recipe> all = new List<Recipe>();
+
+                foreach (var item in recipes)
+                {
+                    if (item.IsFavourite == true)
+                    {
+                        all.Add(item);
+                    }
+                }
+                return all;
+            }
+        }
+
         public Recipe Get(int id)
         {
             using (recipeContext = new RecipeCatalogContext())

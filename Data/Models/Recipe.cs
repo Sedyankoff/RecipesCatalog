@@ -15,6 +15,6 @@ namespace RecipesCatalog.Data.Models
         public string Products { get; set; }
         public string Preparation { get; set; }
 
-        public bool IsFavourite = false;
+        public bool IsFavourite { get; set; }
     }
 }

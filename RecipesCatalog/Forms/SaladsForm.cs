@@ -20,7 +20,6 @@ namespace RecipesCatalog.Forms
         {
             InitializeComponent();
             UpdateGrid();
-            ResetSelect();
         }
 
         private void DisableSelect()
@@ -49,6 +48,8 @@ namespace RecipesCatalog.Forms
                 var id = int.Parse(item[0].Value.ToString());
                 recipeBusiness.Delete(id);
                 UpdateGrid();
+                btnSaladUnfavourite.Visible = false;
+                btnSaladFavourite.Visible = true;
                 ResetSelect();
             }
         }
@@ -75,9 +76,42 @@ namespace RecipesCatalog.Forms
             Recipe selectedRecipe = recipeBusiness.Get(editId);
             return selectedRecipe;
         }
+
+        private void btnSaladFavourite_Click(object sender, EventArgs e)
+        {
+            Recipe recipe = GetInfo();
+            recipe.IsFavourite = true;
+            recipeBusiness.Update(recipe);
+            btnSaladUnfavourite.Visible = true;
+            btnSaladFavourite.Visible=false;
+            UpdateGrid();
+            ResetSelect();
+        }
+
+        private void btnSaladUnfavourite_Click(object sender, EventArgs e)
+        {
+            Recipe recipe = GetInfo();
+            recipe.IsFavourite = false;
+            recipeBusiness.Update(recipe);
+            btnSaladUnfavourite.Visible = false;
+            btnSaladFavourite.Visible = true;
+            UpdateGrid();
+            ResetSelect();
+        }
+
         private void dataSalads_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            Recipe selectedRecipe = GetInfo();
+            if (selectedRecipe.IsFavourite)
+            {
+                btnSaladUnfavourite.Visible = true;
+                btnSaladFavourite.Visible = false;
+            }
+            else
+            {
+                btnSaladUnfavourite.Visible = false;
+                btnSaladFavourite.Visible = true;
+            }
         }
     }
 }
