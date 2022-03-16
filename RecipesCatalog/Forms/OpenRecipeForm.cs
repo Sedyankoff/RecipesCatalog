@@ -23,11 +23,7 @@ namespace RecipesCatalog.Forms
             txtOpenName.Text = recipe.Name;
             txtOpenType.Text = recipe.Type;
             txtOpenPreparation.Text = recipe.Preparation;
-
-            foreach (var product in recipe.Products)
-            {
-                txtOpenProducts.Text += product;
-            }
+            txtOpenProducts.Text = recipe.Products;
         }
 
         private void OpenRecipeForm_Load(object sender, EventArgs e)

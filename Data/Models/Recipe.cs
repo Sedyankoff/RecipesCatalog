@@ -12,7 +12,7 @@ namespace RecipesCatalog.Data.Models
         public string Type { get; set; }
         public string Name { get; set; }
 
-        public List<Product> Products = new List<Product>();
+        public string Products { get; set; }
         public string Preparation { get; set; }
 
         public bool IsFavourite = false;

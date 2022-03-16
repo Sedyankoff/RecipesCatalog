@@ -115,31 +115,11 @@ namespace RecipesCatalog.Forms
                             recipe.Type = recipeType;
                             recipe.Name = recipeName;
                             recipe.Preparation = txtPreparation.Text;
-                            con.Open();
-                            string commandString = "SELECT * from dbo.Products WHERE Name = '@productName'";
-                            SqlCommand cmd = new SqlCommand(commandString, con);
-                            SqlDataReader dr = cmd.ExecuteReader();
-                            while (dr.Read())
-                            {
-                                foreach (var productName in recipeProducts)
-                                {
-                                    cmd.Parameters.AddWithValue("@productName", productName);
-                                    dr = cmd.ExecuteReader();
-                                    while (dr.Read())
-                                    {
-                                        product.Id = int.Parse(dr["Id"].ToString());
-                                        product.Name = dr["Name"].ToString();
-                                        product.Type = dr["Type"].ToString();
-                                    }
-                                    recipe.Products.Add(product);
-                                }
-                            }
-                            con.Close();
-                            product = new Product();
+                            recipe.Products = String.Join(", ", recipeProducts);
 
                             con.Open();
-                            commandString = "SELECT Name,Type from dbo.Recipes";
-                            cmd = new SqlCommand(commandString, con);
+                            string commandString = "SELECT Name,Type from dbo.Recipes";
+                            SqlCommand cmd = new SqlCommand(commandString, con);
                             SqlDataReader dataR = cmd.ExecuteReader();
                             bool found = false;
                             while (dataR.Read())

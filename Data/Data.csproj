@@ -64,6 +64,14 @@
     <Compile Include="Migrations\202203151911135_recipeChange.designer.cs">
       <DependentUpon>202203151911135_recipeChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203161920174_recipeProductsList.cs" />
+    <Compile Include="Migrations\202203161920174_recipeProductsList.designer.cs">
+      <DependentUpon>202203161920174_recipeProductsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203161928152_fixing.cs" />
+    <Compile Include="Migrations\202203161928152_fixing.designer.cs">
+      <DependentUpon>202203161928152_fixing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RecipeCatalogContext.cs" />
     <Compile Include="Models\Product.cs" />
@@ -83,6 +91,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203151911135_recipeChange.resx">
       <DependentUpon>202203151911135_recipeChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203161920174_recipeProductsList.resx">
+      <DependentUpon>202203161920174_recipeProductsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203161928152_fixing.resx">
+      <DependentUpon>202203161928152_fixing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

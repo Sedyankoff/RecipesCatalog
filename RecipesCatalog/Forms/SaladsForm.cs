@@ -33,7 +33,7 @@ namespace RecipesCatalog.Forms
             dataSalads.ClearSelection();
             dataSalads.Enabled = true;
         }
-        
+
         private void UpdateGrid()
         {
             dataSalads.DataSource = recipeBusiness.GetAllByType("Salad");
@@ -66,11 +66,11 @@ namespace RecipesCatalog.Forms
             openRecipeForm.BringToFront();
             openRecipeForm.Show();
         }
-        private Recipe GetInfo() 
+        private Recipe GetInfo()
         {
-                var item = dataSalads.SelectedRows[0].Cells;
-                var id = int.Parse(item[0].Value.ToString());
-                editId = id;
+            var item = dataSalads.SelectedRows[0].Cells;
+            var id = int.Parse(item[0].Value.ToString());
+            editId = id;
 
             Recipe selectedRecipe = recipeBusiness.Get(editId);
             return selectedRecipe;
