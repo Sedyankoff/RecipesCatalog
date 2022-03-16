@@ -14,7 +14,6 @@ namespace RecipesCatalog.Forms
     public partial class MainCoursesForm : Form
     {
         private ProductBusiness productBusiness = new ProductBusiness();
-        private int editId = 0;
         public MainCoursesForm()
         {
             InitializeComponent();

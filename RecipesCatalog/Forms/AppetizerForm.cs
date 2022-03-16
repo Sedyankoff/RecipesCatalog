@@ -15,7 +15,6 @@ namespace RecipesCatalog.Forms
     public partial class AppetizerForm : Form
     {
         private ProductBusiness productBusiness = new ProductBusiness();
-        private int editId = 0;
         public AppetizerForm()
         {
             InitializeComponent();

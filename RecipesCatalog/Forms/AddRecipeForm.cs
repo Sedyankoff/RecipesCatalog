@@ -60,7 +60,7 @@ namespace RecipesCatalog.Forms
                 else
                 {
                     recipeProducts.Add(cboxRecipeProducts.SelectedItem.ToString());
-                    lblOutputAddedRecipe.Text = "Product added successfully!";
+                    lblOutputAddedRecipe.Text = cboxRecipeProducts.SelectedItem.ToString() + " was successfully added to the recipe!";
                 }
             }
 
@@ -100,30 +100,20 @@ namespace RecipesCatalog.Forms
                         }
                         else
                         {
+
+                            string recipeType = cboxRecipeType.SelectedItem.ToString();
+                            string recipeName = txtRecipeName.Text;
+
+                            Recipe recipe = new Recipe();
+                            recipe.Type = recipeType;
+                            recipe.Name = recipeName;
+                            recipe.Preparation = txtPreparation.Text;
                             con.Open();
-                            string commandStringNameCheck = "SELECT Name from dbo.Recipes";
-                            SqlCommand cmd = new SqlCommand(commandStringNameCheck, con);
+                            string commandString = "SELECT * from dbo.Products WHERE Name = '@productName'";
+                            SqlCommand cmd = new SqlCommand(commandString, con);
                             SqlDataReader dr = cmd.ExecuteReader();
-                            bool found = false;
                             while (dr.Read())
                             {
-                                if (txtRecipeName.Text == dr["Name"].ToString())
-                                {
-                                    lblOutputAddedRecipe.Text = "There is already a recipe with that name!";
-                                    found = true;
-                                    break;
-                                }
-                            }
-
-                            if (!found)
-                            {
-                                Recipe recipe = new Recipe();
-                                recipe.Type = cboxRecipeType.SelectedItem.ToString();
-                                recipe.Name = txtRecipeName.Text;
-                                recipe.Preparation = txtPreparation.Text;
-                                string commandString = "SELECT * from dbo.Products WHERE Name = '@productName'";
-                                cmd = new SqlCommand(commandString, con);
-                                dr = cmd.ExecuteReader();
                                 foreach (var productName in recipeProducts)
                                 {
                                     cmd.Parameters.AddWithValue("@productName", productName);
@@ -136,12 +126,32 @@ namespace RecipesCatalog.Forms
                                     }
                                     recipe.Products.Add(product);
                                 }
-                                con.Close();
-                                recipeProducts.Clear();
-                                product = new Product();
+                            }
+                            con.Close();
+                            recipeProducts.Clear();
+                            product = new Product();
+
+                            con.Open();
+                            commandString = "SELECT Name from dbo.Recipes";
+                            cmd = new SqlCommand(commandString, con);
+                            SqlDataReader dataR = cmd.ExecuteReader();
+                            bool found = false;
+                            while (dataR.Read())
+                            {
+                                if (txtRecipeName.Text == dataR["Name"].ToString())
+                                {
+                                    lblOutputAddedRecipe.Text = "There is already a racipe with that name!";
+                                    found = true;
+                                    break;
+                                }
+                            }
+                            if (!found)
+                            {
                                 recipeBusiness.Add(recipe);
+                                lblOutputAddedRecipe.Text = recipeName + " " + recipeType + " was successfully added!";
                                 Clear();
-                                MessageBox.Show("Successfully added!");
+                            }
+                            con.Close();
                             }
                         }
                     }
@@ -149,4 +159,4 @@ namespace RecipesCatalog.Forms
             }
         }
     }
-}
+
