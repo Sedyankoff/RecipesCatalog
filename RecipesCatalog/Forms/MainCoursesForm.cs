@@ -13,7 +13,7 @@ namespace RecipesCatalog.Forms
 {
     public partial class MainCoursesForm : Form
     {
-        private ProductBusiness productBusiness = new ProductBusiness();
+        private RecipeBusiness recipeBusiness = new RecipeBusiness();
         public MainCoursesForm()
         {
             InitializeComponent();
@@ -31,10 +31,9 @@ namespace RecipesCatalog.Forms
             dataMainCourses.ClearSelection();
             dataMainCourses.Enabled = true;
         }
-        ///
         private void UpdateGrid()
         {
-            dataMainCourses.DataSource = productBusiness.GetAll();
+            dataMainCourses.DataSource = recipeBusiness.GetAllByType("Main Course");
             dataMainCourses.ReadOnly = true;
             dataMainCourses.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
@@ -54,7 +53,7 @@ namespace RecipesCatalog.Forms
             {
                 var item = dataMainCourses.SelectedRows[0].Cells;
                 var id = int.Parse(item[0].Value.ToString());
-                productBusiness.DeleteProduct(id);
+                recipeBusiness.Delete(id);
                 UpdateGrid();
                 ResetSelect();
             }

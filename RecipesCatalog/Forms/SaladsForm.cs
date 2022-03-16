@@ -15,7 +15,6 @@ namespace RecipesCatalog.Forms
     public partial class SaladsForm : Form
     {
         private RecipeBusiness recipeBusiness = new RecipeBusiness();
-
         public SaladsForm()
         {
             InitializeComponent();
@@ -36,7 +35,7 @@ namespace RecipesCatalog.Forms
         
         private void UpdateGrid()
         {
-            dataSalads.DataSource = recipeBusiness.GetAll();
+            dataSalads.DataSource = recipeBusiness.GetAllByType("Salad");
             dataSalads.ReadOnly = true;
             dataSalads.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }

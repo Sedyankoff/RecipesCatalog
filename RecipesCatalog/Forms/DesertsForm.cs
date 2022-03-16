@@ -14,7 +14,7 @@ namespace RecipesCatalog.Forms
 {
     public partial class DesertsForm : Form
     {
-        private ProductBusiness productBusiness = new ProductBusiness();
+        private RecipeBusiness recipeBusiness = new RecipeBusiness();
 
         public DesertsForm()
         {
@@ -27,31 +27,25 @@ namespace RecipesCatalog.Forms
             dataDeserts.ClearSelection();
             dataDeserts.Enabled = true;
         }
-        ///
         private void UpdateGrid()
         {
-            dataDeserts.DataSource = productBusiness.GetAll();
+            dataDeserts.DataSource = recipeBusiness.GetAllByType("Desert");
             dataDeserts.ReadOnly = true;
             dataDeserts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
-
-
-
-
         private void btnAddDesert_Click(object sender, EventArgs e)
         {
             AddRecipeForm addRecipeForm = new AddRecipeForm();
             addRecipeForm.BringToFront();
             addRecipeForm.Show();
         }
-
         private void btnRemoveDesert_Click(object sender, EventArgs e)
         {
             if (dataDeserts.SelectedRows.Count > 0)
             {
                 var item = dataDeserts.SelectedRows[0].Cells;
                 var id = int.Parse(item[0].Value.ToString());
-                productBusiness.DeleteProduct(id);
+                recipeBusiness.Delete(id);
                 UpdateGrid();
                 ResetSelect();
             }

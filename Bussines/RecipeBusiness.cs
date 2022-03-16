@@ -19,6 +19,23 @@ namespace RecipesCatalog.Business
                 return recipeContext.Recipes.ToList();
             }
         }
+        public List<Recipe> GetAllByType(string type)
+        {
+            using (recipeContext = new RecipeCatalogContext())
+            {
+                List<Recipe> recipes = recipeContext.Recipes.ToList();
+                List<Recipe> all = new List<Recipe>();
+
+                foreach (var item in recipes)
+                {
+                    if (item.Type.ToString() == type)
+                    {
+                        all.Add(item);
+                    }
+                }
+                return all;
+            }
+        }
 
         public Recipe Get(int id)
         {

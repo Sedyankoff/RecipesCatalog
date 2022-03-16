@@ -186,7 +186,7 @@
             this.lblOutputProducts.Name = "lblOutputProducts";
             this.lblOutputProducts.Size = new System.Drawing.Size(60, 28);
             this.lblOutputProducts.TabIndex = 10;
-            this.lblOutputProducts.Text = "label7";
+            this.lblOutputProducts.Text = "";
             // 
             // ProductsForm
             // 
