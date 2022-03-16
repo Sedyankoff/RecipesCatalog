@@ -61,6 +61,13 @@ namespace RecipesCatalog.Forms
 
         private void btnOpenSalad_Click(object sender, EventArgs e)
         {
+            OpenRecipeForm openRecipeForm = new OpenRecipeForm();
+            openRecipeForm.BringToFront();
+            openRecipeForm.Show();
+        }
+
+        private void dataSalads_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

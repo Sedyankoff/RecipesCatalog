@@ -48,6 +48,7 @@
             this.dataSalads.Name = "dataSalads";
             this.dataSalads.Size = new System.Drawing.Size(322, 365);
             this.dataSalads.TabIndex = 0;
+            this.dataSalads.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataSalads_CellContentClick);
             // 
             // label1
             // 
