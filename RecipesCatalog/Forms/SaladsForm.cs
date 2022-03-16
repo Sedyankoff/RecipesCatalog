@@ -40,7 +40,7 @@ namespace RecipesCatalog.Forms
             dataSalads.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-        private void btnRemoveSalad_Click(object sender, EventArgs e)
+        private void btnRemoveSalad_Click_1(object sender, EventArgs e)
         {
             if (dataSalads.SelectedRows.Count > 0)
             {

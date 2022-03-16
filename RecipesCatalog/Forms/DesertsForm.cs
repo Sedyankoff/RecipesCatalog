@@ -39,7 +39,8 @@ namespace RecipesCatalog.Forms
             addRecipeForm.BringToFront();
             addRecipeForm.Show();
         }
-        private void btnRemoveDesert_Click(object sender, EventArgs e)
+       
+        private void btnRemoveDesert_Click_1(object sender, EventArgs e)
         {
             if (dataDeserts.SelectedRows.Count > 0)
             {
