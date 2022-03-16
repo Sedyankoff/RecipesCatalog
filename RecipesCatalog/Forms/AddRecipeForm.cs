@@ -145,7 +145,10 @@ namespace RecipesCatalog.Forms
                 }
             }
 
+        private void AddRecipeForm_Load(object sender, EventArgs e)
+        {
 
         }
+    }
     }
 

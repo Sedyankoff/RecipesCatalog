@@ -23,5 +23,9 @@ namespace RecipesCatalog.Forms
             openRecipeForm.BringToFront();
             openRecipeForm.Show();
         }
+
+        private void btnRemoveFavourite_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

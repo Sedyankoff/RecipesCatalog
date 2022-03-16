@@ -78,6 +78,7 @@ namespace RecipesCatalog.Forms
             this.btnRemoveFavourite.TabIndex = 4;
             this.btnRemoveFavourite.Text = "Remove";
             this.btnRemoveFavourite.UseVisualStyleBackColor = true;
+            this.btnRemoveFavourite.Click += new System.EventHandler(this.btnRemoveFavourite_Click);
             // 
             // label1
             // 
