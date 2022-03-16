@@ -35,11 +35,6 @@ namespace RecipesCatalog.Forms
             txtBoxProductName.Text = string.Empty;
             txtBoxProductType.Text = string.Empty;
         }
-        private void DisableSelect()
-        {
-            dataProducts.Enabled = false;
-        }
-
         private void ResetSelect()
         {
             dataProducts.ClearSelection();
@@ -76,8 +71,9 @@ namespace RecipesCatalog.Forms
                     productBusiness.Update(editedProduct);
                     UpdateTextBoxes(editId);
                     UpdateGrid();
+                    ResetSelect();
                     Clear();
-                    DisableSelect();
+                    
                 }
             }
         }
@@ -131,7 +127,7 @@ namespace RecipesCatalog.Forms
 
         private void btnRemoveProduct_Click(object sender, EventArgs e)
         {
-            if (dataProducts.SelectedRows.Count > 0)
+            if (dataProducts.SelectedRows.Count < 0)
             {
                 lblOutputProducts.Text = "There is no products to remove!";
             }
