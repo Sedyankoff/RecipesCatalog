@@ -14,6 +14,8 @@ namespace RecipesCatalog.Forms
     public partial class MainCoursesForm : Form
     {
         private RecipeBusiness recipeBusiness = new RecipeBusiness();
+        int editId;
+
         public MainCoursesForm()
         {
             InitializeComponent();
@@ -31,14 +33,13 @@ namespace RecipesCatalog.Forms
             dataMainCourses.ClearSelection();
             dataMainCourses.Enabled = true;
         }
+
         private void UpdateGrid()
         {
             dataMainCourses.DataSource = recipeBusiness.GetAllByType("Main Course");
             dataMainCourses.ReadOnly = true;
             dataMainCourses.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
-
-
 
         private void btnAddMainCourses_Click(object sender, EventArgs e)
         {
@@ -61,9 +62,19 @@ namespace RecipesCatalog.Forms
 
         private void btnOpenMainCourses_Click(object sender, EventArgs e)
         {
-            OpenRecipeForm openRecipeForm = new OpenRecipeForm();
+            OpenRecipeForm openRecipeForm = new OpenRecipeForm(GetInfo());
             openRecipeForm.BringToFront();
             openRecipeForm.Show();
+        }
+
+        private Recipe GetInfo()
+        {
+            var item = dataMainCourses.SelectedRows[0].Cells;
+            var id = int.Parse(item[0].Value.ToString());
+            editId = id;
+
+            Recipe selectedRecipe = recipeBusiness.Get(editId);
+            return selectedRecipe;
         }
     }
 }
