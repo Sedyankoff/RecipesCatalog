@@ -94,6 +94,7 @@ namespace RecipesCatalog.Forms
             this.btnOpenAppetizer.TabIndex = 8;
             this.btnOpenAppetizer.Text = "Open";
             this.btnOpenAppetizer.UseVisualStyleBackColor = true;
+            this.btnOpenAppetizer.Click += new System.EventHandler(this.btnOpenAppetizer_Click);
             // 
             // btnAppetizerUnfavourite
             // 

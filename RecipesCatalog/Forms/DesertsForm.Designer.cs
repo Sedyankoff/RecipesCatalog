@@ -109,6 +109,7 @@
             this.btnOpenDesert.TabIndex = 10;
             this.btnOpenDesert.Text = "Open";
             this.btnOpenDesert.UseVisualStyleBackColor = true;
+            this.btnOpenDesert.Click += new System.EventHandler(this.btnOpenDesert_Click);
             // 
             // label1
             // 

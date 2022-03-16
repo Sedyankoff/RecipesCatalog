@@ -154,6 +154,7 @@
             this.MinimumSize = new System.Drawing.Size(810, 545);
             this.Name = "OpenRecipeForm";
             this.Text = "OpenRecipeForm";
+            this.Load += new System.EventHandler(this.OpenRecipeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

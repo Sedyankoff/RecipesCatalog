@@ -156,7 +156,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(81, 332);
+            this.label3.Location = new System.Drawing.Point(81, 326);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 28);
             this.label3.TabIndex = 13;
@@ -165,7 +165,7 @@
             // txtPreparation
             // 
             this.txtPreparation.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtPreparation.Location = new System.Drawing.Point(86, 366);
+            this.txtPreparation.Location = new System.Drawing.Point(86, 360);
             this.txtPreparation.Multiline = true;
             this.txtPreparation.Name = "txtPreparation";
             this.txtPreparation.Size = new System.Drawing.Size(644, 105);
@@ -190,6 +190,8 @@
             this.Controls.Add(this.cboxRecipeType);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(836, 510);
+            this.MinimumSize = new System.Drawing.Size(836, 510);
             this.Name = "AddRecipeForm";
             this.Text = "AddRecipeForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

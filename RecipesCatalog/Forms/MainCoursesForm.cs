@@ -58,5 +58,12 @@ namespace RecipesCatalog.Forms
                 ResetSelect();
             }
         }
+
+        private void btnOpenMainCourses_Click(object sender, EventArgs e)
+        {
+            OpenRecipeForm openRecipeForm = new OpenRecipeForm();
+            openRecipeForm.BringToFront();
+            openRecipeForm.Show();
+        }
     }
 }

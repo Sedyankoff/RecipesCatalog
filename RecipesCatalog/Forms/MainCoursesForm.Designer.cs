@@ -76,6 +76,7 @@ namespace RecipesCatalog.Forms
             this.btnOpenMainCourses.TabIndex = 10;
             this.btnOpenMainCourses.Text = "Open";
             this.btnOpenMainCourses.UseVisualStyleBackColor = true;
+            this.btnOpenMainCourses.Click += new System.EventHandler(this.btnOpenMainCourses_Click);
             // 
             // dataMainCourses
             // 
