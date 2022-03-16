@@ -97,6 +97,7 @@
             this.btnRemoveDesert.TabIndex = 11;
             this.btnRemoveDesert.Text = "Remove";
             this.btnRemoveDesert.UseVisualStyleBackColor = true;
+            this.btnRemoveDesert.Click += new System.EventHandler(this.btnRemoveDesert_Click_1);
             // 
             // btnOpenDesert
             // 

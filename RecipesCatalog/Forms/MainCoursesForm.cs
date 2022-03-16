@@ -47,7 +47,7 @@ namespace RecipesCatalog.Forms
             addRecipeForm.Show();
         }
 
-        private void btnRemoveMainCourses_Click(object sender, EventArgs e)
+        private void btnRemoveMainCourses_Click_1(object sender, EventArgs e)
         {
             if (dataMainCourses.SelectedRows.Count > 0)
             {

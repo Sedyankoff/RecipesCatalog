@@ -64,6 +64,7 @@ namespace RecipesCatalog.Forms
             this.btnRemoveMainCourses.TabIndex = 11;
             this.btnRemoveMainCourses.Text = "Remove";
             this.btnRemoveMainCourses.UseVisualStyleBackColor = true;
+            this.btnRemoveMainCourses.Click += new System.EventHandler(this.btnRemoveMainCourses_Click_1);
             // 
             // btnOpenMainCourses
             // 

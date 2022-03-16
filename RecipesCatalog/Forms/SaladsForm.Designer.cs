@@ -82,6 +82,7 @@
             this.btnRemoveSalad.TabIndex = 3;
             this.btnRemoveSalad.Text = "Remove";
             this.btnRemoveSalad.UseVisualStyleBackColor = true;
+            this.btnRemoveSalad.Click += new System.EventHandler(this.btnRemoveSalad_Click_1);
             // 
             // btnAddSalad
             // 
