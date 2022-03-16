@@ -35,7 +35,7 @@ namespace RecipesCatalog.Forms
         }
         private void btnAddDesert_Click(object sender, EventArgs e)
         {
-            AddRecipeForm addRecipeForm = new AddRecipeForm();
+            AddRecipeForm addRecipeForm = new AddRecipeForm(3);
             addRecipeForm.BringToFront();
             addRecipeForm.Show();
         }

@@ -61,9 +61,10 @@ namespace RecipesCatalog.Forms
 
         private void btnAddAppetizer_Click(object sender, EventArgs e)
         {
-            AddRecipeForm addRecipeForm = new AddRecipeForm();
+            AddRecipeForm addRecipeForm = new AddRecipeForm(1);
             addRecipeForm.BringToFront();
             addRecipeForm.Show();
+            
         }
 
         private void btnOpenAppetizer_Click(object sender, EventArgs e)
