@@ -132,13 +132,13 @@ namespace RecipesCatalog.Forms
                             product = new Product();
 
                             con.Open();
-                            commandString = "SELECT Name from dbo.Recipes";
+                            commandString = "SELECT Name,Type from dbo.Recipes";
                             cmd = new SqlCommand(commandString, con);
                             SqlDataReader dataR = cmd.ExecuteReader();
                             bool found = false;
                             while (dataR.Read())
                             {
-                                if (txtRecipeName.Text == dataR["Name"].ToString())
+                                if (txtRecipeName.Text == dataR["Name"].ToString() && cboxRecipeType.SelectedItem.ToString() == dataR["Type"].ToString())
                                 {
                                     lblOutputAddedRecipe.Text = "There is already a racipe with that name!";
                                     found = true;
