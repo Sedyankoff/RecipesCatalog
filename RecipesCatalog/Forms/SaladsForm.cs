@@ -15,6 +15,7 @@ namespace RecipesCatalog.Forms
     public partial class SaladsForm : Form
     {
         private RecipeBusiness recipeBusiness = new RecipeBusiness();
+        int editId;
         public SaladsForm()
         {
             InitializeComponent();
@@ -54,18 +55,26 @@ namespace RecipesCatalog.Forms
 
         private void btnAddSalad_Click(object sender, EventArgs e)
         {
-            AddRecipeForm addRecipeForm = new AddRecipeForm();
+            AddRecipeForm addRecipeForm = new AddRecipeForm(0);
             addRecipeForm.BringToFront();
             addRecipeForm.Show();
         }
 
         private void btnOpenSalad_Click(object sender, EventArgs e)
         {
-            OpenRecipeForm openRecipeForm = new OpenRecipeForm();
+            OpenRecipeForm openRecipeForm = new OpenRecipeForm(GetInfo());
             openRecipeForm.BringToFront();
             openRecipeForm.Show();
         }
+        private Recipe GetInfo() 
+        {
+                var item = dataSalads.SelectedRows[0].Cells;
+                var id = int.Parse(item[0].Value.ToString());
+                editId = id;
 
+            Recipe selectedRecipe = recipeBusiness.Get(editId);
+            return selectedRecipe;
+        }
         private void dataSalads_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

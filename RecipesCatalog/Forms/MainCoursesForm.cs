@@ -42,7 +42,7 @@ namespace RecipesCatalog.Forms
 
         private void btnAddMainCourses_Click(object sender, EventArgs e)
         {
-            AddRecipeForm addRecipeForm = new AddRecipeForm();
+            AddRecipeForm addRecipeForm = new AddRecipeForm(2);
             addRecipeForm.BringToFront();
             addRecipeForm.Show();
         }

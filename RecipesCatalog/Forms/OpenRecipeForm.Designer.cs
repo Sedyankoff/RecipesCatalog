@@ -100,6 +100,7 @@
             this.txtOpenType.ReadOnly = true;
             this.txtOpenType.Size = new System.Drawing.Size(201, 41);
             this.txtOpenType.TabIndex = 5;
+            this.txtOpenType.TextChanged += new System.EventHandler(this.txtOpenType_TextChanged);
             // 
             // txtOpenName
             // 
