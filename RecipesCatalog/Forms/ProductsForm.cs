@@ -127,11 +127,7 @@ namespace RecipesCatalog.Forms
 
         private void btnRemoveProduct_Click(object sender, EventArgs e)
         {
-            if (dataProducts.SelectedRows.Count < 0)
-            {
-                lblOutputProducts.Text = "There is no products to remove!";
-            }
-            else
+            if (dataProducts.SelectedRows.Count > 0)
             {
                 var item = dataProducts.SelectedRows[0].Cells;
                 var id = int.Parse(item[0].Value.ToString());
@@ -140,6 +136,10 @@ namespace RecipesCatalog.Forms
                 UpdateGrid();
                 ResetSelect();
                 Clear();
+            }
+            else
+            {
+                lblOutputProducts.Text = "There is no products to remove!";
             }
         }
     }
