@@ -194,7 +194,6 @@
             this.MinimumSize = new System.Drawing.Size(836, 510);
             this.Name = "AddRecipeForm";
             this.Text = "AddRecipeForm";
-            this.Load += new System.EventHandler(this.AddRecipeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

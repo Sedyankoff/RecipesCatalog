@@ -18,7 +18,7 @@ namespace RecipesCatalog.Forms
         SqlConnection con = new SqlConnection(@"Server=.\SQLEXPRESS;Database=RecipesCatalogDB;Trusted_Connection=True;");
         private RecipeBusiness recipeBusiness = new RecipeBusiness();
         private List<string> recipeProducts = new List<string>();
-        private Product product = new Product();
+        SaladsForm saladsForm = new SaladsForm();
 
         public AddRecipeForm()
         {
@@ -145,11 +145,6 @@ namespace RecipesCatalog.Forms
                     }
                 }
             }
-
-        private void AddRecipeForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
     }
 

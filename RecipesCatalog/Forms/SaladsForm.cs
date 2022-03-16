@@ -22,11 +22,6 @@ namespace RecipesCatalog.Forms
             UpdateGrid();
         }
 
-        private void DisableSelect()
-        {
-            dataSalads.Enabled = false;
-        }
-
         private void ResetSelect()
         {
             dataSalads.ClearSelection();
@@ -63,9 +58,12 @@ namespace RecipesCatalog.Forms
 
         private void btnOpenSalad_Click(object sender, EventArgs e)
         {
-            OpenRecipeForm openRecipeForm = new OpenRecipeForm(GetInfo());
-            openRecipeForm.BringToFront();
-            openRecipeForm.Show();
+            if (dataSalads.SelectedRows.Count > 0)
+            {
+                OpenRecipeForm openRecipeForm = new OpenRecipeForm(GetInfo());
+                openRecipeForm.BringToFront();
+                openRecipeForm.Show();
+            }
         }
         private Recipe GetInfo()
         {
