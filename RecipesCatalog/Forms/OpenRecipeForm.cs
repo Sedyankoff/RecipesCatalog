@@ -16,5 +16,10 @@ namespace RecipesCatalog.Forms
         {
             InitializeComponent();
         }
+
+        private void OpenRecipeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

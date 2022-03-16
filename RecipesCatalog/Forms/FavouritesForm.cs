@@ -19,7 +19,9 @@ namespace RecipesCatalog.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            OpenRecipeForm openRecipeForm = new OpenRecipeForm();
+            openRecipeForm.BringToFront();
+            openRecipeForm.Show();
         }
     }
 }

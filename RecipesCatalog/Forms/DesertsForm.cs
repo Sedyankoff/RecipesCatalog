@@ -51,10 +51,5 @@ namespace RecipesCatalog.Forms
                 ResetSelect();
             }
         }
-
-        private void DesertsForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
