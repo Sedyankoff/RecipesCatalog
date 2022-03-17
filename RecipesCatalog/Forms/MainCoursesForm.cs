@@ -82,24 +82,30 @@ namespace RecipesCatalog.Forms
 
         private void btnMainCoursesFavourite_Click(object sender, EventArgs e)
         {
-            Recipe recipe = GetInfo();
-            recipe.IsFavourite = true;
-            recipeBusiness.Update(recipe);
-            btnMainCoursesFavourite.Visible = false;
-            btnMainCoursesUnfavourite.Visible = true;
-            UpdateGrid();
-            ResetSelect();
+            if (dataMainCourses.SelectedRows.Count > 0)
+            {
+                Recipe recipe = GetInfo();
+                recipe.IsFavourite = true;
+                recipeBusiness.Update(recipe);
+                btnMainCoursesFavourite.Visible = false;
+                btnMainCoursesUnfavourite.Visible = true;
+                UpdateGrid();
+                ResetSelect();
+            }
         }
 
         private void btnMainCoursesUnfavourite_Click(object sender, EventArgs e)
         {
-            Recipe recipe = GetInfo();
-            recipe.IsFavourite = false;
-            recipeBusiness.Update(recipe);
-            btnMainCoursesFavourite.Visible = true;
-            btnMainCoursesUnfavourite.Visible = false;
-            UpdateGrid();
-            ResetSelect();
+            if (dataMainCourses.SelectedRows.Count > 0)
+            {
+                Recipe recipe = GetInfo();
+                recipe.IsFavourite = false;
+                recipeBusiness.Update(recipe);
+                btnMainCoursesFavourite.Visible = true;
+                btnMainCoursesUnfavourite.Visible = false;
+                UpdateGrid();
+                ResetSelect();
+            }
         }
 
         private void dataMainCourses_CellContentClick(object sender, DataGridViewCellEventArgs e)

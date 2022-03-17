@@ -75,25 +75,31 @@ namespace RecipesCatalog.Forms
 
         private void btnDesertUnfavourite_Click(object sender, EventArgs e)
         {
-            Recipe recipe = GetInfo();
-            recipe.IsFavourite = false;
-            recipeBusiness.Update(recipe);
-            btnDesertUnfavourite.Visible = false;
-            btnDesertFavourite.Visible = true;
-            UpdateGrid();
-            ResetSelect();
+            if (dataDeserts.SelectedRows.Count > 0)
+            {
+                Recipe recipe = GetInfo();
+                recipe.IsFavourite = false;
+                recipeBusiness.Update(recipe);
+                btnDesertUnfavourite.Visible = false;
+                btnDesertFavourite.Visible = true;
+                UpdateGrid();
+                ResetSelect();
+            }
+            
         }
 
         private void btnDesertFavourite_Click(object sender, EventArgs e)
         {
-            Recipe recipe = GetInfo();
-            recipe.IsFavourite = true;
-            recipeBusiness.Update(recipe);
-            btnDesertUnfavourite.Visible = true;
-            btnDesertFavourite.Visible = false;
-            UpdateGrid();
-            ResetSelect();
-
+            if (dataDeserts.SelectedRows.Count > 0)
+            {
+                Recipe recipe = GetInfo();
+                recipe.IsFavourite = true;
+                recipeBusiness.Update(recipe);
+                btnDesertUnfavourite.Visible = true;
+                btnDesertFavourite.Visible = false;
+                UpdateGrid();
+                ResetSelect();
+            }
         }
 
         private void dataDeserts_CellContentClick(object sender, DataGridViewCellEventArgs e)

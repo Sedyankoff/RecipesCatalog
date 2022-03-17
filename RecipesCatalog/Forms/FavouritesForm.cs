@@ -16,6 +16,7 @@ namespace RecipesCatalog.Forms
     {
         private RecipeBusiness recipeBusiness = new RecipeBusiness();
         int editId;
+
         public FavouritesForm()
         {
             InitializeComponent();
@@ -41,9 +42,9 @@ namespace RecipesCatalog.Forms
         {
             if (dataFavourites.SelectedRows.Count > 0)
             {
-                var item = dataFavourites.SelectedRows[0].Cells;
-                var id = int.Parse(item[0].Value.ToString());
-                recipeBusiness.Delete(id);
+                Recipe recipe = GetInfo();
+                recipe.IsFavourite = false;
+                recipeBusiness.Update(recipe);
                 UpdateGrid();
                 ResetSelect();
             }

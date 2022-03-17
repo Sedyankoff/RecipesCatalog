@@ -73,7 +73,6 @@ namespace RecipesCatalog.Forms
                     UpdateGrid();
                     ResetSelect();
                     Clear();
-                    
                 }
             }
         }
@@ -139,8 +138,13 @@ namespace RecipesCatalog.Forms
             }
             else
             {
-                lblOutputProducts.Text = "There is no products to remove!";
+                lblOutputProducts.Text = "There is no selected product to remove!";
             }
+        }
+
+        private void ProductsForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -184,9 +184,8 @@
             this.lblOutputProducts.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOutputProducts.Location = new System.Drawing.Point(35, 434);
             this.lblOutputProducts.Name = "lblOutputProducts";
-            this.lblOutputProducts.Size = new System.Drawing.Size(60, 28);
+            this.lblOutputProducts.Size = new System.Drawing.Size(0, 28);
             this.lblOutputProducts.TabIndex = 10;
-            this.lblOutputProducts.Text = "";
             // 
             // ProductsForm
             // 
@@ -210,6 +209,7 @@
             this.Controls.Add(this.btnInsertProduct);
             this.Name = "ProductsForm";
             this.Text = "ProductsForm";
+            this.Load += new System.EventHandler(this.ProductsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
