@@ -62,9 +62,12 @@ namespace RecipesCatalog.Forms
 
         private void btnOpenMainCourses_Click(object sender, EventArgs e)
         {
-            OpenRecipeForm openRecipeForm = new OpenRecipeForm(GetInfo());
-            openRecipeForm.BringToFront();
-            openRecipeForm.Show();
+            if (dataMainCourses.SelectedRows.Count > 0)
+            {
+                OpenRecipeForm openRecipeForm = new OpenRecipeForm(GetInfo());
+                openRecipeForm.BringToFront();
+                openRecipeForm.Show();
+            }
         }
 
         private Recipe GetInfo()
@@ -75,6 +78,43 @@ namespace RecipesCatalog.Forms
 
             Recipe selectedRecipe = recipeBusiness.Get(editId);
             return selectedRecipe;
+        }
+
+        private void btnMainCoursesFavourite_Click(object sender, EventArgs e)
+        {
+            Recipe recipe = GetInfo();
+            recipe.IsFavourite = true;
+            recipeBusiness.Update(recipe);
+            btnMainCoursesFavourite.Visible = true;
+            btnMainCoursesUnfavourite.Visible = false;
+            UpdateGrid();
+            ResetSelect();
+        }
+
+        private void btnMainCoursesUnfavourite_Click(object sender, EventArgs e)
+        {
+            Recipe recipe = GetInfo();
+            recipe.IsFavourite = true;
+            recipeBusiness.Update(recipe);
+            btnMainCoursesFavourite.Visible = false;
+            btnMainCoursesUnfavourite.Visible = true;
+            UpdateGrid();
+            ResetSelect();
+        }
+
+        private void dataMainCourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Recipe selectedRecipe = GetInfo();
+            if (selectedRecipe.IsFavourite)
+            {
+                btnMainCoursesUnfavourite.Visible = true;
+                btnMainCoursesFavourite.Visible = false;
+            }
+            else
+            {
+                btnMainCoursesUnfavourite.Visible = false;
+                btnMainCoursesFavourite.Visible = true;
+            }
         }
     }
 }

@@ -85,6 +85,7 @@ namespace RecipesCatalog.Forms
             this.dataMainCourses.Name = "dataMainCourses";
             this.dataMainCourses.Size = new System.Drawing.Size(322, 365);
             this.dataMainCourses.TabIndex = 8;
+            this.dataMainCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataMainCourses_CellContentClick);
             // 
             // btnMainCoursesUnfavourite
             // 
@@ -98,6 +99,7 @@ namespace RecipesCatalog.Forms
             this.btnMainCoursesUnfavourite.TabIndex = 14;
             this.btnMainCoursesUnfavourite.UseVisualStyleBackColor = true;
             this.btnMainCoursesUnfavourite.Visible = false;
+            this.btnMainCoursesUnfavourite.Click += new System.EventHandler(this.btnMainCoursesUnfavourite_Click);
             // 
             // picBoxMainCourses
             // 
@@ -129,6 +131,7 @@ namespace RecipesCatalog.Forms
             this.btnMainCoursesFavourite.Size = new System.Drawing.Size(50, 40);
             this.btnMainCoursesFavourite.TabIndex = 16;
             this.btnMainCoursesFavourite.UseVisualStyleBackColor = true;
+            this.btnMainCoursesFavourite.Click += new System.EventHandler(this.btnMainCoursesFavourite_Click);
             // 
             // MainCoursesForm
             // 

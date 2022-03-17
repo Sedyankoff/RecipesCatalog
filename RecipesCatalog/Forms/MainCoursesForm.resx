@@ -121,7 +121,7 @@
   <data name="btnMainCoursesUnfavourite.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6gAAAOoB+Ss1JgAABMhJREFUWEftlVlzFGUUhttS0SqqQgJkmQgJJqAgkBgjiUStipfeKy6IQUXRsCiI
+        6QAAAOkBVJIUSwAABMhJREFUWEftlVlzFGUUhttS0SqqQgJkmQgJJqAgkBgjiUStipfeKy6IQUXRsCiI
         UcEFBRFEEAMqrmhwjSIqqCBgFBC88MYL/wSZfXp6Znom9fqer08PEzMFA2X0hlP1VaWSTn9PPe/pc6wL
         db4VWtCO4J1zMXjbjebor/+bCj90PUL3tyG44AYM/h8Q4SXXwUDcRwuECN7lQeifR7eiq5oRffRaeBCt
         hGhD6B5CqAl9bPQq9vRsRFc1IUKISLdvgnEIxB0dowsQf+EaxJ6didhTpyHC3a0exELGMZoQ9uarEN9w
@@ -148,7 +148,7 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQcAAAEHCAMAAACUdXOVAAAABGdBTUEAALGPC/xhBQAAAEJQTFRF6+vr
         jo6OHBwcqqqqcXFxVVVVODg4xsbG////4uLiUFBQTk5ONzc3kJCQICAgT09PNjY2MzMzd3d3fX19qamp
-        mZmZlVHxOQAAAAlwSFlzAAAOwwAADsMBx2+oZAAABdxJREFUeF7tnIeW2zgMRa06nm3Z+v+/ungASNEt
+        mZmZlVHxOQAAAAlwSFlzAAAOwgAADsIBFShKgAAABdxJREFUeF7tnIeW2zgMRa06nm3Z+v+/ungASNEt
         sZ3xFPreczKEwIonkpJlOTsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuMSQ6bMz
         ZvrsoIMxjWLKo6eG+RBc1GFmmhizFkzaT8RJyL5xPN819bwOcx70TRvlSciuQ9qdU8P0mI9XgTmWNDun
         CXx4lpjPYPdQaRmHS2BYYoaMa+8XzyEDLdvCpkPJ2Vgzp0vijrqujGK495SuLxyn14OM+hwdT4rjz1cZ
@@ -179,7 +179,7 @@
   <data name="btnMainCoursesFavourite.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6wAAAOsBK2zXwgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAThSURBVFhH7ZZr
+        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAThSURBVFhH7ZZr
         TFtlGMfP1G0m3MP9YmGDIbEZgzFF6DmHzn2aGYsZTBMxCpoo9wG7cHGTJjo2SEDEZBnbWNxwjnEdVxkO
         GYgWzFhkCRhmjPhJBuW0pbQ9vRwenwNvGIbNtRP8tF/SpP0/72l+Pefp+7zUU54ULo/N4LIZ1WwGPcN9
         JEsl8f+DpoCOUh9lBC6PAS6bBpQQ1KlsJCmvP9rjbKu6kAH1Mebz2Vy6UpTg0ukWUl5f1CflEVoFu6A5
