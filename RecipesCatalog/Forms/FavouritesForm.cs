@@ -60,7 +60,6 @@ namespace RecipesCatalog.Forms
             var item = dataFavourites.SelectedRows[0].Cells;
             var id = int.Parse(item[0].Value.ToString());
             editId = id;
-
             Recipe selectedRecipe = recipeBusiness.Get(editId);
             return selectedRecipe;
         }

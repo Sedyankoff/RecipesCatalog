@@ -25,17 +25,13 @@ namespace RecipesCatalog.Forms
             InitializeComponent();
             cboxDisplay();
         }
+
         public AddRecipeForm(int index)
         {
             InitializeComponent();
             cboxDisplay();
             cboxRecipeType.SelectedIndex = index;
             txtRecipeName.Select();
-        }
-
-        private void cboxRecipeProducts_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         public void cboxDisplay()
@@ -70,7 +66,6 @@ namespace RecipesCatalog.Forms
                     lblOutputAddedRecipe.Text = cboxRecipeProducts.SelectedItem.ToString() + " was successfully added to the recipe!";
                 }
             }
-
         }
 
         private void Clear()
@@ -107,7 +102,6 @@ namespace RecipesCatalog.Forms
                         }
                         else
                         {
-
                             string recipeType = cboxRecipeType.SelectedItem.ToString();
                             string recipeName = txtRecipeName.Text;
 
@@ -136,15 +130,15 @@ namespace RecipesCatalog.Forms
                             {
                                 recipeBusiness.Add(recipe);
                                 lblOutputAddedRecipe.Text = recipeName + " " + recipeType + " was successfully added!";
-                                recipeProducts.RemoveRange(0,recipeProducts.Count-1);
+                                recipeProducts.RemoveRange(0, recipeProducts.Count - 1);
                                 Clear();
                             }
                             con.Close();
-                            }
                         }
                     }
                 }
             }
+        }
     }
-    }
+}
 

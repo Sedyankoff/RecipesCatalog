@@ -12,7 +12,6 @@ namespace RecipesCatalog
 {
     public partial class Form1 : Form
     {
-
         private Form activeForm;
 
         public Form1()
@@ -23,11 +22,6 @@ namespace RecipesCatalog
         private void btnSalads_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.SaladsForm(), sender);
-        }
-
-        private void panelButtons_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)

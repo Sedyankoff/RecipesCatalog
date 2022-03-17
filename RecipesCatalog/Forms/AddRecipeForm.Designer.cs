@@ -116,7 +116,6 @@
             this.cboxRecipeProducts.Name = "cboxRecipeProducts";
             this.cboxRecipeProducts.Size = new System.Drawing.Size(121, 31);
             this.cboxRecipeProducts.TabIndex = 6;
-            this.cboxRecipeProducts.SelectedIndexChanged += new System.EventHandler(this.cboxRecipeProducts_SelectedIndexChanged);
             // 
             // btnAddProductRecipe
             // 

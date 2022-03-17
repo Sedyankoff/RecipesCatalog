@@ -107,17 +107,17 @@ namespace RecipesCatalog.Forms
                     }
                     if (!found) 
                     {
-                            var name = txtBoxProductName.Text;
-                            var type = txtBoxProductType.Text;
+                        var name = txtBoxProductName.Text;
+                        var type = txtBoxProductType.Text;
 
-                            Product product = new Product();
-                            product.Name = name;
-                            product.Type = type;
+                        Product product = new Product();
+                        product.Name = name;
+                        product.Type = type;
 
-                            productBusiness.AddProduct(product);
-                            lblOutputProducts.Text = name + " was succesfully added!";
-                            UpdateGrid();
-                            Clear();
+                        productBusiness.AddProduct(product);
+                        lblOutputProducts.Text = name + " was succesfully added!";
+                        UpdateGrid();
+                        Clear();
                     }
                     con.Close();
                 }
@@ -140,11 +140,6 @@ namespace RecipesCatalog.Forms
             {
                 lblOutputProducts.Text = "There is no selected product to remove!";
             }
-        }
-
-        private void ProductsForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -148,7 +148,6 @@
             this.Controls.Add(this.dataSalads);
             this.Name = "SaladsForm";
             this.Text = "SaladsForm";
-            this.Load += new System.EventHandler(this.SaladsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSalads)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSalads)).EndInit();
             this.ResumeLayout(false);

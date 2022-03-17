@@ -35,10 +35,6 @@ namespace RecipesCatalog.Forms
             dataAppetizer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
         
-        private void AppetizerForm_Load(object sender, EventArgs e)
-        {
-
-        }
         private void btnRemoveAppetizer_Click(object sender, EventArgs e)
         {
             if (dataAppetizer.SelectedRows.Count > 0)
@@ -56,7 +52,6 @@ namespace RecipesCatalog.Forms
             AddRecipeForm addRecipeForm = new AddRecipeForm(1);
             addRecipeForm.BringToFront();
             addRecipeForm.Show();
-            
         }
 
         private void btnOpenAppetizer_Click(object sender, EventArgs e)
@@ -74,7 +69,6 @@ namespace RecipesCatalog.Forms
             var item = dataAppetizer.SelectedRows[0].Cells;
             var id = int.Parse(item[0].Value.ToString());
             editId = id;
-
             Recipe selectedRecipe = recipeBusiness.Get(editId);
             return selectedRecipe;
         }

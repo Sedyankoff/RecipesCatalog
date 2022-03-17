@@ -209,7 +209,6 @@
             this.Controls.Add(this.btnInsertProduct);
             this.Name = "ProductsForm";
             this.Text = "ProductsForm";
-            this.Load += new System.EventHandler(this.ProductsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

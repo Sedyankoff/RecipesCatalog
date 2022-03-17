@@ -36,9 +36,9 @@ namespace RecipesCatalog.Forms
         }
         private void btnAddDesert_Click(object sender, EventArgs e)
         {
-                AddRecipeForm addRecipeForm = new AddRecipeForm(3);
-                addRecipeForm.BringToFront();
-                addRecipeForm.Show();
+            AddRecipeForm addRecipeForm = new AddRecipeForm(3);
+            addRecipeForm.BringToFront();
+            addRecipeForm.Show();
         }
        
         private void btnRemoveDesert_Click_1(object sender, EventArgs e)
@@ -68,7 +68,6 @@ namespace RecipesCatalog.Forms
             var item = dataDeserts.SelectedRows[0].Cells;
             var id = int.Parse(item[0].Value.ToString());
             editId = id;
-
             Recipe selectedRecipe = recipeBusiness.Get(editId);
             return selectedRecipe;
         }
@@ -85,7 +84,6 @@ namespace RecipesCatalog.Forms
                 UpdateGrid();
                 ResetSelect();
             }
-            
         }
 
         private void btnDesertFavourite_Click(object sender, EventArgs e)

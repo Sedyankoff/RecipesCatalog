@@ -65,12 +65,12 @@ namespace RecipesCatalog.Forms
                 openRecipeForm.Show();
             }
         }
+
         private Recipe GetInfo()
         {
             var item = dataSalads.SelectedRows[0].Cells;
             var id = int.Parse(item[0].Value.ToString());
             editId = id;
-
             Recipe selectedRecipe = recipeBusiness.Get(editId);
             return selectedRecipe;
         }
@@ -116,11 +116,6 @@ namespace RecipesCatalog.Forms
                 btnSaladUnfavourite.Visible = false;
                 btnSaladFavourite.Visible = true;
             }
-        }
-
-        private void SaladsForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
