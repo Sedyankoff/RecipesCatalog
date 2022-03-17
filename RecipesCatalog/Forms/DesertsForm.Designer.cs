@@ -53,6 +53,7 @@
             this.btnDesertUnfavourite.TabIndex = 15;
             this.btnDesertUnfavourite.UseVisualStyleBackColor = true;
             this.btnDesertUnfavourite.Visible = false;
+            this.btnDesertUnfavourite.Click += new System.EventHandler(this.btnDesertUnfavourite_Click);
             // 
             // btnDesertFavourite
             // 
@@ -65,6 +66,7 @@
             this.btnDesertFavourite.Size = new System.Drawing.Size(50, 40);
             this.btnDesertFavourite.TabIndex = 14;
             this.btnDesertFavourite.UseVisualStyleBackColor = true;
+            this.btnDesertFavourite.Click += new System.EventHandler(this.btnDesertFavourite_Click);
             // 
             // picBoxSalads
             // 
@@ -128,6 +130,7 @@
             this.dataDeserts.Name = "dataDeserts";
             this.dataDeserts.Size = new System.Drawing.Size(322, 365);
             this.dataDeserts.TabIndex = 8;
+            this.dataDeserts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataDeserts_CellContentClick);
             // 
             // DesertsForm
             // 

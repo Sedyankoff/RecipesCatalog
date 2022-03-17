@@ -1,4 +1,5 @@
 ﻿using RecipesCatalog.Business;
+using RecipesCatalog.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace RecipesCatalog.Forms
     public partial class FavouritesForm : Form
     {
         private RecipeBusiness recipeBusiness = new RecipeBusiness();
+        int editId;
         public FavouritesForm()
         {
             InitializeComponent();
@@ -27,13 +29,39 @@ namespace RecipesCatalog.Forms
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenRecipeForm openRecipeForm = new OpenRecipeForm();
-            openRecipeForm.BringToFront();
-            openRecipeForm.Show();
+            if (dataFavourites.SelectedRows.Count > 0)
+            {
+                OpenRecipeForm openRecipeForm = new OpenRecipeForm(GetInfo());
+                openRecipeForm.BringToFront();
+                openRecipeForm.Show();
+            }
         }
 
         private void btnRemoveFavourite_Click(object sender, EventArgs e)
         {
+            if (dataFavourites.SelectedRows.Count > 0)
+            {
+                var item = dataFavourites.SelectedRows[0].Cells;
+                var id = int.Parse(item[0].Value.ToString());
+                recipeBusiness.Delete(id);
+                UpdateGrid();
+                ResetSelect();
+            }
+        }
+
+        private void ResetSelect()
+        {
+            dataFavourites.ClearSelection();
+            dataFavourites.Enabled = true;
+        }
+        private Recipe GetInfo()
+        {
+            var item = dataFavourites.SelectedRows[0].Cells;
+            var id = int.Parse(item[0].Value.ToString());
+            editId = id;
+
+            Recipe selectedRecipe = recipeBusiness.Get(editId);
+            return selectedRecipe;
         }
     }
 }

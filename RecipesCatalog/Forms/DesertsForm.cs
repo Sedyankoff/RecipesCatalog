@@ -36,9 +36,9 @@ namespace RecipesCatalog.Forms
         }
         private void btnAddDesert_Click(object sender, EventArgs e)
         {
-            AddRecipeForm addRecipeForm = new AddRecipeForm(3);
-            addRecipeForm.BringToFront();
-            addRecipeForm.Show();
+                AddRecipeForm addRecipeForm = new AddRecipeForm(3);
+                addRecipeForm.BringToFront();
+                addRecipeForm.Show();
         }
        
         private void btnRemoveDesert_Click_1(object sender, EventArgs e)
@@ -55,9 +55,12 @@ namespace RecipesCatalog.Forms
 
         private void btnOpenDesert_Click(object sender, EventArgs e)
         {
-            OpenRecipeForm openRecipeForm = new OpenRecipeForm(GetInfo());
-            openRecipeForm.BringToFront();
-            openRecipeForm.Show();
+            if (dataDeserts.SelectedRows.Count > 0)
+            {
+                OpenRecipeForm openRecipeForm = new OpenRecipeForm(GetInfo());
+                openRecipeForm.BringToFront();
+                openRecipeForm.Show();
+            }
         }
 
         private Recipe GetInfo()
@@ -68,6 +71,44 @@ namespace RecipesCatalog.Forms
 
             Recipe selectedRecipe = recipeBusiness.Get(editId);
             return selectedRecipe;
+        }
+
+        private void btnDesertUnfavourite_Click(object sender, EventArgs e)
+        {
+            Recipe recipe = GetInfo();
+            recipe.IsFavourite = false;
+            recipeBusiness.Update(recipe);
+            btnDesertUnfavourite.Visible = false;
+            btnDesertFavourite.Visible = true;
+            UpdateGrid();
+            ResetSelect();
+        }
+
+        private void btnDesertFavourite_Click(object sender, EventArgs e)
+        {
+            Recipe recipe = GetInfo();
+            recipe.IsFavourite = true;
+            recipeBusiness.Update(recipe);
+            btnDesertUnfavourite.Visible = true;
+            btnDesertFavourite.Visible = false;
+            UpdateGrid();
+            ResetSelect();
+
+        }
+
+        private void dataDeserts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Recipe selectedRecipe = GetInfo();
+            if (selectedRecipe.IsFavourite)
+            {
+                btnDesertUnfavourite.Visible = true;
+                btnDesertFavourite.Visible = false;
+            }
+            else
+            {
+                btnDesertUnfavourite.Visible = false;
+                btnDesertFavourite.Visible = true;
+            }
         }
     }
 }

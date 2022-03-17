@@ -85,8 +85,8 @@ namespace RecipesCatalog.Forms
             Recipe recipe = GetInfo();
             recipe.IsFavourite = true;
             recipeBusiness.Update(recipe);
-            btnMainCoursesFavourite.Visible = true;
-            btnMainCoursesUnfavourite.Visible = false;
+            btnMainCoursesFavourite.Visible = false;
+            btnMainCoursesUnfavourite.Visible = true;
             UpdateGrid();
             ResetSelect();
         }
@@ -94,10 +94,10 @@ namespace RecipesCatalog.Forms
         private void btnMainCoursesUnfavourite_Click(object sender, EventArgs e)
         {
             Recipe recipe = GetInfo();
-            recipe.IsFavourite = true;
+            recipe.IsFavourite = false;
             recipeBusiness.Update(recipe);
-            btnMainCoursesFavourite.Visible = false;
-            btnMainCoursesUnfavourite.Visible = true;
+            btnMainCoursesFavourite.Visible = true;
+            btnMainCoursesUnfavourite.Visible = false;
             UpdateGrid();
             ResetSelect();
         }
