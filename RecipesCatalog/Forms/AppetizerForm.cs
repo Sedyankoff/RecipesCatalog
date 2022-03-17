@@ -23,12 +23,6 @@ namespace RecipesCatalog.Forms
             ResetSelect();
             UpdateGrid();
         }
-
-        private void DisableSelect()
-        {
-            dataAppetizer.Enabled = false;
-        }
-
         private void ResetSelect()
         {
             dataAppetizer.ClearSelection();
@@ -57,8 +51,6 @@ namespace RecipesCatalog.Forms
             }
         }
 
-       
-
         private void btnAddAppetizer_Click(object sender, EventArgs e)
         {
             AddRecipeForm addRecipeForm = new AddRecipeForm(1);
@@ -69,9 +61,12 @@ namespace RecipesCatalog.Forms
 
         private void btnOpenAppetizer_Click(object sender, EventArgs e)
         {
-            OpenRecipeForm openRecipeForm = new OpenRecipeForm(GetInfo());
-            openRecipeForm.BringToFront();
-            openRecipeForm.Show();
+            if (dataAppetizer.SelectedRows.Count > 0)
+            {
+                OpenRecipeForm openRecipeForm = new OpenRecipeForm(GetInfo());
+                openRecipeForm.BringToFront();
+                openRecipeForm.Show();
+            }
         }
 
         private Recipe GetInfo()
@@ -82,6 +77,43 @@ namespace RecipesCatalog.Forms
 
             Recipe selectedRecipe = recipeBusiness.Get(editId);
             return selectedRecipe;
+        }
+
+        private void btnAppetizerFavourite_Click(object sender, EventArgs e)
+        {
+            Recipe recipe = GetInfo();
+            recipe.IsFavourite = true;
+            recipeBusiness.Update(recipe);
+            btnAppetizerUnfavourite.Visible = true;
+            btnAppetizerFavourite.Visible = false;
+            UpdateGrid();
+            ResetSelect();
+        }
+
+        private void btnAppetizerUnfavourite_Click(object sender, EventArgs e)
+        {
+            Recipe recipe = GetInfo();
+            recipe.IsFavourite = true;
+            recipeBusiness.Update(recipe);
+            btnAppetizerUnfavourite.Visible = false;
+            btnAppetizerFavourite.Visible = true;
+            UpdateGrid();
+            ResetSelect();
+        }
+
+        private void dataAppetizer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Recipe selectedRecipe = GetInfo();
+            if (selectedRecipe.IsFavourite)
+            {
+                btnAppetizerUnfavourite.Visible = true;
+                btnAppetizerFavourite.Visible = false;
+            }
+            else
+            {
+                btnAppetizerUnfavourite.Visible = false;
+                btnAppetizerFavourite.Visible = true;
+            }
         }
     }
 }

@@ -59,6 +59,7 @@ namespace RecipesCatalog.Forms
             this.dataAppetizer.Name = "dataAppetizer";
             this.dataAppetizer.Size = new System.Drawing.Size(322, 365);
             this.dataAppetizer.TabIndex = 2;
+            this.dataAppetizer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAppetizer_CellContentClick);
             // 
             // btnAddAppetizer
             // 
@@ -109,6 +110,7 @@ namespace RecipesCatalog.Forms
             this.btnAppetizerUnfavourite.TabIndex = 12;
             this.btnAppetizerUnfavourite.UseVisualStyleBackColor = false;
             this.btnAppetizerUnfavourite.Visible = false;
+            this.btnAppetizerUnfavourite.Click += new System.EventHandler(this.btnAppetizerUnfavourite_Click);
             // 
             // picBoxAppetizer
             // 
@@ -130,6 +132,7 @@ namespace RecipesCatalog.Forms
             this.btnAppetizerFavourite.Size = new System.Drawing.Size(50, 40);
             this.btnAppetizerFavourite.TabIndex = 13;
             this.btnAppetizerFavourite.UseVisualStyleBackColor = true;
+            this.btnAppetizerFavourite.Click += new System.EventHandler(this.btnAppetizerFavourite_Click);
             // 
             // AppetizerForm
             // 
