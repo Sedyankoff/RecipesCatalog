@@ -15,10 +15,10 @@ namespace RecipesCatalog.Forms
 {
     public partial class AddRecipeForm : Form
     {
+        //Връзката към базата данни
         SqlConnection con = new SqlConnection(@"Server=.\SQLEXPRESS;Database=RecipesCatalogDB;Trusted_Connection=True;");
         private RecipeBusiness recipeBusiness = new RecipeBusiness();
         private List<string> recipeProducts = new List<string>();
-        SaladsForm saladsForm = new SaladsForm();
 
         public AddRecipeForm()
         {
@@ -34,6 +34,8 @@ namespace RecipesCatalog.Forms
             txtRecipeName.Select();
         }
 
+
+        //Добавя имената на продуктите към комбо бокс
         public void cboxDisplay()
         {
             con.Open();
@@ -48,6 +50,8 @@ namespace RecipesCatalog.Forms
             con.Close();
         }
 
+
+        //Бутон за добавяне на продукт към рецепта
         private void btnAddProductRecipe_Click(object sender, EventArgs e)
         {
             if (cboxRecipeProducts.SelectedItem == null)
@@ -68,6 +72,8 @@ namespace RecipesCatalog.Forms
             }
         }
 
+
+        //Изчиства всички обекти на Form-а
         private void Clear()
         {
             cboxRecipeType.SelectedItem = null;
@@ -76,6 +82,8 @@ namespace RecipesCatalog.Forms
             txtPreparation.Text = string.Empty;
         }
 
+
+        //Логиката за добавяне на рецепта
         private void btnAddRecipe_Click(object sender, EventArgs e)
         {
             if (cboxRecipeType.SelectedItem == null)
@@ -138,6 +146,11 @@ namespace RecipesCatalog.Forms
                     }
                 }
             }
+        }
+
+        private void AddRecipeForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
