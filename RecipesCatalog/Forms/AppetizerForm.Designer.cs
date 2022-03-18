@@ -150,6 +150,7 @@ namespace RecipesCatalog.Forms
             this.Controls.Add(this.dataAppetizer);
             this.Name = "AppetizerForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.AppetizerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataAppetizer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAppetizer)).EndInit();
             this.ResumeLayout(false);

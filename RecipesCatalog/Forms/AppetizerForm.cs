@@ -23,18 +23,26 @@ namespace RecipesCatalog.Forms
             ResetSelect();
             UpdateGrid();
         }
+
+
+        //Reset-ва Select-шъна в DataGrid-а
         private void ResetSelect()
         {
             dataAppetizer.ClearSelection();
             dataAppetizer.Enabled = true;
         }
+
+
+        //Обновява DataGrid-а
         private void UpdateGrid()
         {
             dataAppetizer.DataSource = recipeBusiness.GetAllByType("Appetizer");
             dataAppetizer.ReadOnly = true;
             dataAppetizer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
-        
+
+
+        //Бутон за премахване на рецепта от тип Appetizer
         private void btnRemoveAppetizer_Click(object sender, EventArgs e)
         {
             if (dataAppetizer.SelectedRows.Count > 0)
@@ -47,6 +55,8 @@ namespace RecipesCatalog.Forms
             }
         }
 
+
+        //Бутон за добавяне на рецепта от тип Appetizer
         private void btnAddAppetizer_Click(object sender, EventArgs e)
         {
             AddRecipeForm addRecipeForm = new AddRecipeForm(1);
@@ -54,6 +64,8 @@ namespace RecipesCatalog.Forms
             addRecipeForm.Show();
         }
 
+
+        //Отваря информация за избраната рецепта от тип Appetizer
         private void btnOpenAppetizer_Click(object sender, EventArgs e)
         {
             if (dataAppetizer.SelectedRows.Count > 0)
@@ -64,6 +76,8 @@ namespace RecipesCatalog.Forms
             }
         }
 
+
+        //Взима информация за избраната рецепта от тип Appetizer
         private Recipe GetInfo()
         {
             var item = dataAppetizer.SelectedRows[0].Cells;
@@ -73,6 +87,8 @@ namespace RecipesCatalog.Forms
             return selectedRecipe;
         }
 
+
+        //Добавя рецепта от тип Appetizer към "Favourite"
         private void btnAppetizerFavourite_Click(object sender, EventArgs e)
         {
             if (dataAppetizer.SelectedRows.Count > 0)
@@ -87,6 +103,8 @@ namespace RecipesCatalog.Forms
             }  
         }
 
+
+        //Маха рецептата от тип Appetizer от "Favourite"
         private void btnAppetizerUnfavourite_Click(object sender, EventArgs e)
         {
             if (dataAppetizer.SelectedRows.Count > 0)
@@ -101,6 +119,8 @@ namespace RecipesCatalog.Forms
             } 
         }
 
+
+        //Промяна на бутона "Favourite" при избиране на рецепта
         private void dataAppetizer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Recipe selectedRecipe = GetInfo();
@@ -114,6 +134,11 @@ namespace RecipesCatalog.Forms
                 btnAppetizerUnfavourite.Visible = false;
                 btnAppetizerFavourite.Visible = true;
             }
+        }
+
+        private void AppetizerForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
