@@ -251,6 +251,7 @@
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Size = new System.Drawing.Size(836, 510);
             this.panelButtons.TabIndex = 2;
+            this.panelButtons.Paint += new System.Windows.Forms.PaintEventHandler(this.panelButtons_Paint);
             // 
             // panelTitle
             // 
