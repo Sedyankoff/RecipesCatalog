@@ -123,6 +123,7 @@
             this.txtOpenProducts.ReadOnly = true;
             this.txtOpenProducts.Size = new System.Drawing.Size(367, 56);
             this.txtOpenProducts.TabIndex = 7;
+            this.txtOpenProducts.TextChanged += new System.EventHandler(this.txtOpenProducts_TextChanged);
             // 
             // txtOpenPreparation
             // 

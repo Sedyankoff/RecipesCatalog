@@ -23,6 +23,9 @@ namespace RecipesCatalog.Forms
             ResetSelect();
             UpdateGrid();
         }
+
+
+        
         private void ResetSelect()
         {
             dataDeserts.ClearSelection();

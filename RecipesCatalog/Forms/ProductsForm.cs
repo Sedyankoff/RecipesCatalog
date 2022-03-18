@@ -41,6 +41,8 @@ namespace RecipesCatalog.Forms
             dataProducts.Enabled = true;
         }
 
+
+        //Взима информацията от TextBox-овете и обновява избрания продукт
         private void UpdateTextBoxes(int id) 
         {
             Product update = productBusiness.Get(id);
@@ -48,6 +50,9 @@ namespace RecipesCatalog.Forms
             update.Name = txtBoxProductName.Text;
             update.Type = txtBoxProductType.Text;
         }
+
+
+        //Взима обновения продукт
         private Product GetEditedProduct()
         {
             Product product = new Product();

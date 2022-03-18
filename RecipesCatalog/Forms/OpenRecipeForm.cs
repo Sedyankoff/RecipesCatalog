@@ -35,5 +35,10 @@ namespace RecipesCatalog.Forms
         {
 
         }
+
+        private void txtOpenProducts_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
