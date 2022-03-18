@@ -12,6 +12,8 @@ namespace RecipesCatalog.Business
     {
         private RecipeCatalogContext recipeContext;
 
+
+        //Взима всички рецепти от базата данни
         public List<Recipe> GetAll()
         {
             using (recipeContext = new RecipeCatalogContext())
@@ -19,6 +21,9 @@ namespace RecipesCatalog.Business
                 return recipeContext.Recipes.ToList();
             }
         }
+
+
+        //Взима всички рецепти, които отговарят на първоначален зададен тип
         public List<Recipe> GetAllByType(string type)
         {
             using (recipeContext = new RecipeCatalogContext())
@@ -37,6 +42,8 @@ namespace RecipesCatalog.Business
             }
         }
 
+
+        //Взима всички рецепти ,които имат стойност за променливата "IsFavourite = true"
         public List<Recipe> GetAllFavourites()
         {
             using (recipeContext = new RecipeCatalogContext())
@@ -55,6 +62,8 @@ namespace RecipesCatalog.Business
             }
         }
 
+
+        //Взима рецепта по ID
         public Recipe Get(int id)
         {
             using (recipeContext = new RecipeCatalogContext())
@@ -64,6 +73,8 @@ namespace RecipesCatalog.Business
             }
         }
 
+
+        //Добавя рецепта в базата данни 
         public void Add(Recipe recipe)
         {
             using (recipeContext = new RecipeCatalogContext())
@@ -74,6 +85,8 @@ namespace RecipesCatalog.Business
             }
         }
 
+
+        //Обновява рецепта в базата данни
         public void Update(Recipe recipe)
         {
             using (recipeContext = new RecipeCatalogContext())
@@ -89,6 +102,8 @@ namespace RecipesCatalog.Business
             }
         }
 
+
+        //Премахва рецепта от базата данни
         public void Delete(int id)
         {
             using (recipeContext = new RecipeCatalogContext())
