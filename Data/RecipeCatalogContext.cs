@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace RecipesCatalog.Data
 {
+
+    //Създава базата данни и таблиците за Продуктите(Products) и Рецептите(Recipes)
     public class RecipeCatalogContext : DbContext
     {
         public RecipeCatalogContext()
