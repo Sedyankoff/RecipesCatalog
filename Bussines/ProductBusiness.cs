@@ -12,6 +12,8 @@ namespace RecipesCatalog.Business
     {
         private RecipeCatalogContext recipeCatalogContext;
 
+
+        //Взима всички продукти от базата данни
         public List<Product> GetAll()
         {
             using (recipeCatalogContext = new RecipeCatalogContext())
@@ -20,6 +22,8 @@ namespace RecipesCatalog.Business
             }
         }
 
+
+        //Взима продукт по ID от базата данни
         public Product Get(int id)
         {
             using (recipeCatalogContext = new RecipeCatalogContext())
@@ -28,6 +32,9 @@ namespace RecipesCatalog.Business
 
             }
         }
+
+
+        //Премахва продукт по ID от базата данни
         public void DeleteProduct(int id)
         {
             using (recipeCatalogContext = new RecipeCatalogContext())
@@ -40,6 +47,9 @@ namespace RecipesCatalog.Business
                 }
             }
         }
+
+
+        //Добавя продукт в базата данни
         public void AddProduct(Product product)
         {
             using (recipeCatalogContext = new RecipeCatalogContext())
@@ -49,6 +59,8 @@ namespace RecipesCatalog.Business
             }
         }
 
+
+        //Обновява продукт в базата данни
         public void Update(Product product)
         {
             using (recipeCatalogContext = new RecipeCatalogContext())
@@ -63,6 +75,5 @@ namespace RecipesCatalog.Business
 
             }
         }
-
     }
 }
